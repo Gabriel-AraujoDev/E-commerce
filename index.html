@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="assets/css/header/top-strip/top-strip.css">
         <link rel="stylesheet" href="assets/css/header/header.css">
         <link rel="stylesheet" href="assets/css/header/navigation/navigation.css">
+        <link rel="stylesheet" href="assets/css/banner/banner.css">
     </head>
     <body>
         <header class="site-header" role="banner">
@@ -148,7 +149,43 @@
             </nav>
         </header>
 
-        
+        <section class="banner" aria-label="Banner promocional">
+            <div class="banner-slider">
+                <img src="assets/images/banner-1.png" alt="Anúncio 1" class="banner-slide active">
+                <img src="assets/images/banner-2.png" alt="Anúncio 2" class="banner-slide">
+                <img src="assets/images/banner-3.png" alt="Anúncio 3" class="banner-slide">
+
+                <div class="banner-overlay">
+                    <div class="banner-content">
+                        <h2 class="banner-title">
+                            Tudo que você precisa, em um só lugar.
+                        </h2>
+
+                        <p class="banner-description">
+                            Qualidade, variedade e os melhores preços para o seu dia a dia.
+                        </p>
+
+                        <a href="#" class="banner-button">
+                            Comprar agora
+                        </a>
+                    </div>
+
+                    <button class="banner-arrow banner-prev" aria-label="Banner anterior">
+                        &#10094;
+                    </button>
+
+                    <button class="banner-arrow banner-next" aria-label="Próximo banner">
+                        &#10095;
+                    </button>
+
+                    <div class="banner-indicators">
+                        <button class="indicator active" aria-label="Banner 1"></button>
+                        <button class="indicator" aria-label="Banner 2"></button>
+                        <button class="indicator" aria-label="Banner 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
         <script src="" async defer></script>
     </body>
 </html>
