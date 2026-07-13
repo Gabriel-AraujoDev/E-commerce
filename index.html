@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="assets/css/header/header.css">
         <link rel="stylesheet" href="assets/css/header/navigation/navigation.css">
         <link rel="stylesheet" href="assets/css/banner/banner.css">
+        <link rel="stylesheet" href="assets/css/categories/categories.css">
     </head>
     <body>
         <header class="site-header" role="banner">
@@ -170,13 +171,11 @@
                         </a>
                     </div>
 
-                    <button class="banner-arrow banner-prev" aria-label="Banner anterior">
-                        &#10094;
-                    </button>
-
-                    <button class="banner-arrow banner-next" aria-label="Próximo banner">
-                        &#10095;
-                    </button>
+                    <div class="banner-indicators">
+                        <button class="indicator active" aria-label="Banner 1"></button>
+                        <button class="indicator" aria-label="Banner 2"></button>
+                        <button class="indicator" aria-label="Banner 3"></button>
+                    </div>
 
                     <div class="banner-indicators">
                         <button class="indicator active" aria-label="Banner 1"></button>
@@ -186,6 +185,80 @@
                 </div>
             </div>
         </section>
+
+        <!-- foi usado IA para criar todas as categorias escritas abaixo -->
+        <section class="categories" aria-labelledby="categories-title">
+            <div class="categories-header">
+                <h2 class="categories-title">
+                    Navegue por categoria
+                </h2>
+
+                <a href="#" class="categories-link">
+                    <span>Ver todas</span>
+
+                    <img class="arrow-icon" src="assets/icons/categories/arrow-right.svg">
+                </a>
+            </div>
+
+            <nav class="categories-nav" aria-label="Categorias de produtos">
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/male.svg">
+                    </div>
+                    <span class="category-name">Masculino</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/female.svg">
+                    </div>
+                    <span class="category-name">Feminino</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/shoes.svg">
+                    </div>
+                    <span class="category-name">Calçados</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/accessories.svg">
+                    </div>
+                    <span class="category-name">Acessórios</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/electronics.svg">
+                    </div>
+                    <span class="category-name">Eletrônicos</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/home.svg">
+                    </div>
+                    <span class="category-name">Casa</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/sports.svg">
+                    </div>
+                    <span class="category-name">Esportes</span>
+                </a>
+
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <img src="assets/icons/categories/beauty.svg">
+                    </div>
+                    <span class="category-name">Beleza</span>
+                </a>
+            </nav>
+        </section>
+
         <script src="" async defer></script>
     </body>
 </html>
