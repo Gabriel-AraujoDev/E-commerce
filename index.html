@@ -382,13 +382,15 @@
         <section class="newsletter" aria-labelledby="newsletter-title">
             <div class="newsletter-content">
                 <div class="newsletter-info">
-                    <h2 class="newsletter-title">
-                        5% OFF
-                    </h2>
+                    <div class="newsletter-header">
+                        <h2 class="newsletter-title">
+                            5% OFF
+                        </h2>
 
-                    <p class="newsletter-description">
-                        Na primeira compra
-                    </p>
+                        <p class="newsletter-description">
+                            na primeira compra
+                        </p>
+                    </div>
 
                     <p class="newsletter-description">
                         Use o cupom: <strong>BEMVINDO</strong>
@@ -396,15 +398,19 @@
                 </div>
 
                 <form class="newsletter-form" role="form">
-                    <label class="accessibility-label" for="newsletter-email">Digite seu e-mail para pedir o desconto.</label>
+                    <div class="newsletter-input-group">
+                        <label class="accessibility-label" for="newsletter-email">Digite seu e-mail para pedir o desconto.</label>
                     
-                    <input type="email" class="newsletter-input" placeholder="Digite seu e-mail" id="newsletter-email">
+                        <input type="email" class="newsletter-input" placeholder="Digite seu e-mail" id="newsletter-email">
 
-                    <button type="submit" class="newsletter-button">Quero o desconto</button>
-
-                    <p class="newsletter-privacy">
-                        *Válido para produtos vendidos e entregues pelo Mercadão
-                    </p>
+                        <button type="submit" class="newsletter-button">Quero o desconto</button>
+                    </div>
+                    
+                    <div class="newsletter-privacy">
+                        <p class="newsletter-privacy">
+                            *Válido para produtos vendidos e entregues pelo Mercadão
+                        </p>
+                    </div>
                 </form>
             </div>
         </section>
