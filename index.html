@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Mercadão</title>
         <meta name="description" content="Um e-commerce de produtos de alta qualidade, oferecendo uma experiência de compra conveniente e sustentável para os consumidores.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +12,15 @@
         <link rel="stylesheet" href="assets/css/header/navigation/navigation.css">
         <link rel="stylesheet" href="assets/css/banner/banner.css">
         <link rel="stylesheet" href="assets/css/categories/categories.css">        
-        <link rel="stylesheet" href="assets/css/fatured-products/fatured-products.css">
+        <link rel="stylesheet" href="assets/css/featured-products/featured-products.css">
         <link rel="stylesheet" href="assets/css/newsletter/newsletter.css">
     </head>
+
     <body>
         <header class="site-header" role="banner">
             <aside class="top-strip">
                 <div class="shipping-banner">
-                    <img class="shipping-icon" src="assets/icons/top-strip/shipping-icon.svg" alt="Ícone de frete">
+                    <img class="shipping-icon" src="assets/icons/top-strip/shipping-icon.svg" alt="">
                     
                     <span class="shipping-text">Frete grátis em compras acima de R$199</span>
                 </div>
@@ -31,13 +31,13 @@
 
                 <div class="info-strip">
                     <a class="assistance-info" href="#">
-                        <img class="assistance-icon" src="assets/icons/top-strip/assistance-icon.svg" alt="Ícone de assistência">
+                        <img class="assistance-icon" src="assets/icons/top-strip/assistance-icon.svg" alt="">
                         
                         <span class="assistance-text">Atendimento</span>
                     </a>
 
                     <a class="help-info" href="#">
-                        <img class="help-icon" src="assets/icons/top-strip/help-icon.svg" alt="Ícone de ajuda">
+                        <img class="help-icon" src="assets/icons/top-strip/help-icon.svg" alt="">
                         
                         <span class="help-text">Ajuda</span>
                     </a>
@@ -86,7 +86,7 @@
 
                         <li>
                             <a class="cart-link" href="#">
-                                <img class="cart-icon user-actions-icon" src="assets/icons/header/user-actions/cart-icon.svg" alt="Ícone de carrinho">
+                                <img class="cart-icon user-actions-icon" src="assets/icons/header/user-actions/cart-icon.svg" alt="">
                                 
                                 <span class="cart-count">0</span>
                                 
@@ -101,7 +101,7 @@
                 <ul class="categories-list">
                     <li>
                         <a class="categories-link" href="#">
-                            <img class="categories-icon" src="assets/icons/header/main-navigation/hamburger.svg" alt="Ícone de categorias">
+                            <img class="categories-icon" src="assets/icons/header/main-navigation/hamburger.svg" alt="">
                             
                             <span class="categories-text">Todas as categorias</span>
                         </a>
@@ -154,9 +154,9 @@
 
         <section class="banner" aria-label="Banner promocional">
             <div class="banner-slider">
-                <img src="assets/images/banner-1.png" alt="Anúncio 1" class="banner-slide active">
-                <img src="assets/images/banner-2.png" alt="Anúncio 2" class="banner-slide">
-                <img src="assets/images/banner-3.png" alt="Anúncio 3" class="banner-slide">
+                <img src="assets/images/banner-1.png" alt="" class="banner-slide active" fetchpriority="high">
+                <img src="assets/images/banner-2.png" alt="" class="banner-slide">
+                <img src="assets/images/banner-3.png" alt="" class="banner-slide">
 
                 <div class="banner-overlay">
                     <div class="banner-content">
@@ -178,17 +178,10 @@
                         <button class="indicator" aria-label="Banner 2"></button>
                         <button class="indicator" aria-label="Banner 3"></button>
                     </div>
-
-                    <div class="banner-indicators">
-                        <button class="indicator active" aria-label="Banner 1"></button>
-                        <button class="indicator" aria-label="Banner 2"></button>
-                        <button class="indicator" aria-label="Banner 3"></button>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- foi usado IA para criar todas as categorias escritas abaixo -->
         <section class="categories" aria-labelledby="categories-title">
             <div class="categories-header">
                 <h2 class="categories-title">
@@ -198,63 +191,63 @@
                 <a href="#" class="categories-link">
                     <span>Ver todas</span>
 
-                    <img class="arrow-icon" src="assets/icons/categories/arrow-right.svg">
+                    <img class="arrow-icon" src="assets/icons/categories/arrow-right.svg" loading="lazy" alt="">
                 </a>
             </div>
 
             <nav class="categories-nav" aria-label="Categorias de produtos">
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/t-shirt.png">
+                        <img src="assets/images/categories/t-shirt.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Masculino</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/female.png">
+                        <img src="assets/images/categories/female.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Feminino</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/shoes.png">
+                        <img src="assets/images/categories/shoes.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Calçados</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/accessories.png">
+                        <img src="assets/images/categories/accessories.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Acessórios</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/electronics.png">
+                        <img src="assets/images/categories/electronics.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Eletrônicos</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/home.png">
+                        <img src="assets/images/categories/home.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Casa</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/sports.png">
+                        <img src="assets/images/categories/sports.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Esportes</span>
                 </a>
 
                 <a href="#" class="category-card">
                     <div class="category-icon">
-                        <img src="assets/images/categories/beauty.png">
+                        <img src="assets/images/categories/beauty.png" loading="lazy" alt="">
                     </div>
                     <span class="category-name">Beleza</span>
                 </a>
@@ -271,19 +264,20 @@
                     <a href="#" class="featured-products-link">
                         <span>Ver todos</span>
 
-                        <img class="arrow-icon" src="assets/icons/categories/arrow-right.svg">
+                        <img class="arrow-icon" src="assets/icons/categories/arrow-right.svg" loading="lazy" alt="">
                     </a>
                 </div>
 
                 <div class="products-grid">
                     <article class="product-card">
                         <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                            <img src="assets/icons/fatured-products/heart.svg" alt="">
+                            <img src="assets/icons/featured-products/heart.svg" loading="lazy" alt="">
                         </button>
 
                         <img src="assets/images/featured-products/backpack.png"
-                            alt="Mochila Básica"
-                            class="product-image">
+                            alt=""
+                            class="product-image"
+                            loading="lazy">
 
                         <div class="product-info">
                             <h3 class="product-name">Mochila Básica</h3>
@@ -298,12 +292,13 @@
 
                     <article class="product-card">
                         <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                            <img src="assets/icons/fatured-products/heart.svg" alt="">
+                            <img src="assets/icons/featured-products/heart.svg" loading="lazy" alt="">
                         </button>
 
-                        <img src="assets/images/featured-products/ChatGPT Image Jul 22, 2026, 05_07_24 PM.png"
-                            alt="Tênis Branco"
-                            class="product-image">
+                        <img src="assets/images/featured-products/tennis.png"
+                            alt=""
+                            class="product-image"
+                            loading="lazy">
 
                         <div class="product-info">
                             <h3 class="product-name">Tênis Branco</h3>
@@ -318,12 +313,13 @@
 
                     <article class="product-card">
                         <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                            <img src="assets/icons/fatured-products/heart.svg" alt="">
+                            <img src="assets/icons/featured-products/heart.svg" alt="" loading="lazy">
                         </button>
 
                         <img src="assets/images/featured-products/headphones.png"
-                            alt="Fone bluetooth"
-                            class="product-image">
+                            alt=""
+                            class="product-image"
+                            loading="lazy">
 
                         <div class="product-info">
                             <h3 class="product-name">Fone bluetooth</h3>
@@ -338,12 +334,13 @@
 
                     <article class="product-card">
                         <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                            <img src="assets/icons/fatured-products/heart.svg" alt="">
+                            <img src="assets/icons/featured-products/heart.svg" alt="" loading="lazy">
                         </button>
 
                         <img src="assets/images/featured-products/t-shirt.png"
-                            alt="Camiseta Simples"
-                            class="product-image">
+                            alt=""
+                            class="product-image"
+                            loading="lazy">
 
                         <div class="product-info">
                             <h3 class="product-name">Camiseta Simples</h3>
@@ -358,12 +355,13 @@
 
                     <article class="product-card">
                         <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                            <img src="assets/icons/fatured-products/heart.svg" alt="">
+                            <img src="assets/icons/featured-products/heart.svg" alt="" loading="lazy">
                         </button>
 
-                        <img src="assets/images/featured-products/water-bottle .png"
-                            alt="Garrafa de Água"
-                            class="product-image">
+                        <img src="assets/images/featured-products/water-bottle.png"
+                            alt=""
+                            class="product-image"
+                            loading="lazy">
 
                         <div class="product-info">
                             <h3 class="product-name">Garrafa de Água</h3>
@@ -414,6 +412,7 @@
                 </form>
             </div>
         </section>
-        <script src="" async defer></script>
+
+        <!-- <script src="" async defer></script> -->
     </body>
 </html>
