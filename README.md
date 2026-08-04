@@ -1,73 +1,72 @@
-# 📸 Preview
-
-![Preview do projeto](assets/images/preview.png)
-
 # Mercadão
 
+## 📸 Preview
+
+![Preview do projeto](assets/images/preview.png)
 
 Um projeto de e-commerce desenvolvido com foco em utilizar os conceitos de Engenharia de Software, priorizando a organização, escalabilidade e boas práticas de desenvolvimento.
 
 > 🚧 Projeto em desenvolvimento.
 
--
+---
 
-# 📖 Sobre
+## 📖 Sobre
 
-O mercadão é um projeto que eu criei para evoluir técnicas e conhecimentos em desenvolvimento web e na engenharia de software
+O mercadão é um projeto que eu criei para evoluir técnicas e conhecimentos em desenvolvimento web e na engenharia de software.
 
 O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver uma aplicação completa, utilizando organização, que vai me ajudar na expansão de novas coisas no projeto atual.
 
--
+---
 
-# 🎯 Objetivos
+## 🎯 Objetivos
 
-* Desenvolver uma aplicação escalável.
-* Aplicar HTML semântico.
-* Organizar o CSS em componentes independentes.
-* Manter um código limpo e de fácil manutenção.
-* Evoluir o projeto para uma aplicação Full Stack.
+- Desenvolver uma aplicação escalável.
+- Aplicar HTML semântico.
+- Organizar o CSS em componentes independentes.
+- Manter um código limpo e de fácil manutenção.
+- Evoluir o projeto para uma aplicação Full Stack.
 
--
+---
 
-# ✨ Funcionalidades atuais
+## ✨ Funcionalidades atuais
 
 - Header completo
-  * Faixa superior com informações e suporte
-  * Barra de pesquisa
-  * Área da conta do usuário
-  * Favoritos
-  * Carrinho de compras
-  * Menu de navegação principal
-  * Navegação por categorias
+  - Faixa superior com informações e suporte
+  - Barra de pesquisa
+  - Área da conta do usuário
+  - Favoritos
+  - Carrinho de compras
+  - Menu de navegação principal
+  - Navegação por categorias
 
 - Banner principal
 
 - Seção de categorias
 
 - Produtos em destaque
-  * Cards de produtos
-  * Botão de favoritos
-  * Informações de preço e parcelamento
+  - Cards de produtos
+  - Botão de favoritos
+  - Informações de preço e parcelamento
 
 - Newsletter
-  * Campo para cadastro de e-mail
+  - Campo para cadastro de e-mail
 
 - Interface organizada por componentes
 
 - Estrutura preparada para integração com JavaScript e backend
 
--
+---
 
-# 🚀 Próximas funcionalidades
+## 🚀 Próximas funcionalidades
 
-> Interface (Front-end)
+### Interface (Front-end)
 
 - [ ] Adicionar seção de benefícios (frete, garantia e segurança)
 - [ ] Desenvolver o rodapé
 - [ ] Implementar animações e transições na interface
 - [ ] Melhorar a responsividade para diferentes dispositivos
 
-> Funcionalidades
+### Funcionalidades
 
 - [ ] Slider funcional no banner
 - [ ] Barra de pesquisa dinâmica
@@ -75,7 +74,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - [ ] Carrinho de compras
 - [ ] Navegação entre páginas da aplicação
 
-> Páginas
+### Páginas
 
 - [ ] Página de produtos
 - [ ] Página de detalhes do produto
@@ -84,7 +83,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - [ ] Página de login e cadastro
 - [ ] Página de perfil do usuário
 
-> Back-end
+### Back-end
 
 - [ ] Desenvolvimento de uma API REST
 - [ ] Sistema de autenticação de usuários
@@ -93,7 +92,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - [ ] Validação de dados
 - [ ] Tratamento de erros
 
-> Banco de Dados
+### Banco de Dados
 
 - [ ] Modelagem do banco de dados
 - [ ] Cadastro de usuários
@@ -103,7 +102,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - [ ] Carrinho persistente
 - [ ] Histórico de pedidos
 
-> Qualidade de Software
+### Qualidade de Software
 
 - [ ] Melhorar a acessibilidade da aplicação
 - [ ] Padronizar o código seguindo boas práticas
@@ -111,40 +110,42 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - [ ] Otimizar o desempenho da aplicação
 - [ ] Documentar a API
 
--
+---
 
-# 🛠 Tecnologias
+## 🛠 Tecnologias
 
-> Front-end
+### Front-end
 
 - HTML5
 - CSS3
 - JavaScript
 
-> Back-end (Planejado)
+### Back-end (Planejado)
 
 - Node.js
 - Express.js
 - REST API
 
-> Banco de Dados (Planejado)
+### Banco de Dados (Planejado)
 
 - MySQL
- 
-> Ferramentas
+
+### Ferramentas
 
 - Git
 - GitHub
 - Visual Studio Code
 
-# 📂 Organização do projeto
+---
+
+## 📂 Organização do projeto
 
 - Estrutura modular de arquivos.
 - CSS separado por componentes.
 - Código organizado para facilitar manutenção e evolução.
 
--
+---
 
-# 📌 Objetivo de aprendizado
+## 📌 Objetivo de aprendizado
 
 Este projeto faz parte dos meus estudos em Engenharia de Software e continuará recebendo melhorias conforme avanço nos estudos, incluindo arquitetura de backend, banco de dados e integração entre cliente e servidor.
