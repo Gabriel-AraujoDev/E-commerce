@@ -1,0 +1,36 @@
+.trust-section {
+    margin-top: 2rem;
+    padding-inline: 4vw;
+}
+
+.trust-container {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #eeeded;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+}
+
+.trust-card {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.trust-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.trust-tittle {
+    font-size: 1rem;
+    color: #242424;
+    font-weight: bold;
+}
+
+.trust-description {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
