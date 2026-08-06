@@ -1,0 +1,61 @@
+.site-footer {
+    margin-top: 2rem;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 20vw;
+}
+
+.footer-title {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1b1b1b;
+}
+
+.footer-description {
+    font-size: 13px;
+    color: rgb(22, 22, 22);
+    margin-bottom: 5px;
+}
+
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-image {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.payment-method-image {
+    width: 40px;
+    height: auto;
+}
