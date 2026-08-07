@@ -63,8 +63,8 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 ### Interface (Front-end)
 
-- [ ] Adicionar seção de benefícios (frete, garantia e segurança)
-- [ ] Desenvolver o rodapé
+- [x] Adicionar seção de benefícios (frete, garantia e segurança)
+- [x] Desenvolver o rodapé
 - [ ] Implementar animações e transições na interface
 - [ ] Melhorar a responsividade para diferentes dispositivos
 
