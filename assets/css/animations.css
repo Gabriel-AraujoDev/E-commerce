@@ -1,0 +1,31 @@
+/* Na parte do header */
+.assistance-info,
+.help-info,
+.account-subtext,
+.account-text, 
+.favorites-text,
+.cart-text,
+.navigation-link,
+.categories-link,
+.search {
+    transition: 0.2s ease;
+}
+
+.account-subtext:hover, 
+.favorites-text:hover,
+.cart-text:hover,
+.navigation-link:hover,
+.help-info:hover,
+.assistance-info:hover {
+    opacity: 0.6;
+}
+
+.categories-link:hover,
+.account-text:hover {
+    opacity: 0.95;
+}
+
+.search:hover,
+.search:focus-within {
+    background: #f7f7f7c4;
+}

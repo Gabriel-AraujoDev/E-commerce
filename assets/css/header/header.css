@@ -60,12 +60,6 @@
     cursor: pointer;
 }
 
-/* Agrupado o focus do input e do botão dinâmico */
-.search-input:focus,
-.search-input:focus + .search-button {
-    background: #f7f7f7c4;
-}
-
 .search-icon {
     width: 25px;
     height: auto;
