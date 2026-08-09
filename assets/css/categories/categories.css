@@ -31,7 +31,7 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     gap: 2rem;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .category-icon {
-    padding: 1rem;
+    padding: 5px;
     width: 100px;
     height: 100px;
 
@@ -60,6 +60,6 @@
 .category-icon img {
     width: 100%;
     height: 100%;
-    filter: saturate(60%) brightness(95%);
     object-fit: cover;
+    image-rendering: auto;
 }
