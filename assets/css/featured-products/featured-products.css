@@ -10,7 +10,7 @@
 }
 
 .featured-products-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 700;
     color: #111111;
 }
@@ -23,15 +23,10 @@
     gap: 0.5rem;
 }
 
-.featured-products-link span {
-    font-size: 0.85rem;
-    font-weight: 700;
+.all-featured-products-text {
     color: #000000;
-}
-
-.arrow-icon {
-    width: 15px;
-    height: auto;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .product-card{

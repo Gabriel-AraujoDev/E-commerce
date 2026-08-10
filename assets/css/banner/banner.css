@@ -49,18 +49,15 @@
 .indicator {
     width: 24px;
     height: 6px;
-
     border: none;
     border-radius: 999px;
-
     background: rgba(0, 0, 0, .15);
     cursor: pointer;
-
-    transition: .3s;
+    transition: width 0.3s ease;
 }
 
 .indicator.active {
-    width: 36px;
+    width: 40px;
     background: #111;
 }
 

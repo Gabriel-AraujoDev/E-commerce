@@ -10,15 +10,15 @@
 }
 
 .categories-title {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     font-weight: 700;
     color: #111111;
 }
 
-
-.arrow-icon {
-    width: 15px;
-    height: auto;
+.all-categories-text {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .categories-nav {

@@ -29,3 +29,89 @@
 .search:focus-within {
     background: #f7f7f7c4;
 }
+
+/* Parte do banner */
+
+.banner-button {
+    transition: 0.2s ease;
+}
+
+.banner-button:hover {
+   background-color: rgba(10, 10, 10, 0.95);
+}
+
+.indicator:hover {
+    width: 36px;
+}
+
+/* Parte dos protudos mais vendidos */
+.all-featured-products-text,
+.featured-products-link,
+.product-card,
+.favorite-button {
+    transition: 0.2s ease;
+}
+
+.featured-products-link:hover .all-featured-products-text {
+    opacity: 0.95;
+}
+
+.featured-products-link:hover .arrow-icon {
+    transform: translateX(1px);
+}
+
+.product-card:hover {
+    transform: scale(1.025);
+    cursor:pointer;
+}
+
+.favorite-button:hover {
+    transform: scale(1.1);
+}
+
+/* Parte do newslatter */
+.newsletter-button {
+    transition: 0.2s ease;
+}
+
+.newsletter-button:hover {
+    background-color: rgba(10, 10, 10, 0.95);
+}
+
+/* Parte de categorias lá em baixo do site */
+
+.category-card,
+.arrow-icon,
+.category-name,
+.all-categories-text {
+    transition: 0.2s ease;
+}
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card:hover .category-name {
+    opacity: 0.6;
+}
+
+.categories-link:hover .arrow-icon {
+    transform: translateX(1px);
+}
+
+.categories-link:hover .all-categories-text {
+    opacity: 0.95;
+}
+
+/* Parte do footer */
+.footer-link,
+.newsletter-button-footer {
+    transition: 0.2s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.6;
+}
+
+.newsletter-button-footer:hover {
+    background-color: rgba(10, 10, 10, 0.95);
+}
