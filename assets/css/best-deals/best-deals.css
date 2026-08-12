@@ -1,0 +1,30 @@
+.best-deals {
+    margin-top: 2rem;
+    padding-inline: 4vw;
+}
+
+.best-deals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.best-deals-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+.best-deals-link {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+}
+
+.all-best-deals-text {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+}
