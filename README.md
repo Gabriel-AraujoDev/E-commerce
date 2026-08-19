@@ -2,7 +2,7 @@
 
 ## 📸 Preview
 
-.
+..
 
 Um projeto de e-commerce desenvolvido com foco em utilizar os conceitos de Engenharia de Software, priorizando a organização, escalabilidade e boas práticas de desenvolvimento.
 
