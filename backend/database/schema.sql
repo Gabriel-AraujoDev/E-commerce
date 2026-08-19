@@ -10,3 +10,4 @@ CREATE TABLE produtos (
     estoque INTEGER NOT NULL,
     categoria_id INTEGER REFERENCES categorias(id)
 );
+

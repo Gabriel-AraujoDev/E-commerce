@@ -1,6 +1,6 @@
 const pool = require("../database/connection");
 
-async function listarProdutos(req, res) {
+async function listProducts(req, res) {
     try {
         const result = await pool.query("SELECT * FROM produtos");
 
@@ -12,5 +12,5 @@ async function listarProdutos(req, res) {
 }
 
 module.exports = {
-    listarProdutos
+    listProducts
 };
