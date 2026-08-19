@@ -2,9 +2,9 @@
 
 ## 📸 Preview
 
-![Preview do projeto](assets/images/preview/preview-header.png)
-![](assets/images/preview/preview-main.png)
-![](assets/images/preview/preview-footer.jpeg)
+![Preview do projeto](frontend/assets/images/preview/preview-header.png)
+![](frontend/assets/images/preview/preview-main.png)
+![](frontend/assets/images/preview/preview-footer.jpeg)
 
 Um projeto de e-commerce desenvolvido com foco em utilizar os conceitos de Engenharia de Software, priorizando a organização, escalabilidade e boas práticas de desenvolvimento.
 
@@ -65,7 +65,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 - [x] Adicionar seção de benefícios (frete, garantia e segurança)
 - [x] Desenvolver o rodapé
-- [ ] Implementar animações e transições na interface
+- [x] Implementar animações e transições na interface
 - [ ] Melhorar a responsividade para diferentes dispositivos
 
 ### Funcionalidades
@@ -96,7 +96,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 ### Banco de Dados
 
-- [ ] Modelagem do banco de dados
+- [x] Modelagem do banco de dados
 - [ ] Cadastro de usuários
 - [ ] Cadastro de produtos
 - [ ] Categorias
@@ -125,6 +125,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 ### Back-end (Planejado)
 
 - Node.js
+- React.js
 - Express.js
 - REST API
 
