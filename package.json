@@ -4,6 +4,7 @@
   "description": "![Preview do projeto](assets/images/preview/preview-header.png)\r ![](assets/images/preview/preview-main.png)\r ![](assets/images/preview/preview-footer.jpeg)",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +20,14 @@
   },
   "homepage": "https://github.com/Gabriel-AraujoDev/E-commerce#readme",
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "pg": "^8.23.0"
+    "pg": "^8.23.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "vite": "^8.2.2"
   }
 }
