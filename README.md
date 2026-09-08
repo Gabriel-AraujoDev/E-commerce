@@ -85,9 +85,9 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 ### Back-end
 
-- [ ] Desenvolvimento de uma API REST
+- [x] Desenvolvimento de uma API REST
 - [ ] Sistema de autenticação de usuários
-- [ ] Gerenciamento de produtos
+- [x] Gerenciamento de produtos
 - [ ] Gerenciamento de pedidos
 - [ ] Validação de dados
 - [ ] Tratamento de erros
@@ -96,8 +96,8 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 - [x] Modelagem do banco de dados
 - [ ] Cadastro de usuários
-- [ ] Cadastro de produtos
-- [ ] Categorias
+- [x] Cadastro de produtos
+- [x] Categorias
 - [ ] Favoritos
 - [ ] Carrinho persistente
 - [ ] Histórico de pedidos
@@ -105,8 +105,8 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 ### Qualidade de Software
 
 - [ ] Melhorar a acessibilidade da aplicação
-- [ ] Padronizar o código seguindo boas práticas
-- [ ] Organizar a arquitetura do projeto
+- [x] Padronizar o código seguindo boas práticas
+- [x] Organizar a arquitetura do projeto
 - [ ] Otimizar o desempenho da aplicação
 - [ ] Documentar a API
 
