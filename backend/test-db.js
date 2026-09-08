@@ -1,11 +1,5 @@
 const pool = require("./database/connection");
-require("dotenv").config();
 
-console.log("HOST:", process.env.DB_HOST);
-console.log("PORT:", process.env.DB_PORT);
-console.log("USER:", process.env.DB_USER);
-console.log("PASSWORD:", typeof process.env.DB_PASSWORD);
-console.log("DATABASE:", process.env.DB_NAME);
 async function testConnection() {
     try {
         const result = await pool.query("SELECT NOW()");
