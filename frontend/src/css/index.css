@@ -1,0 +1,15 @@
+@import "reset.css";
+@import "global.css";
+
+@import "home/top-strip/top-strip.css";
+@import "header/header.css";
+@import "header/navigation/navigation.css";
+
+@import "home/banner/banner.css";
+@import "home/categories/categories.css";
+@import "home/newsletter/newsletter.css";
+@import "home/trust-section/trust-section.css";
+@import "footer/footer.css";
+@import "home/products-grid/products-grid.css";
+@import "home/announcement/announcement.css";
+@import "animations.css";
