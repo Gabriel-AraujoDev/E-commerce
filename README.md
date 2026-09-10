@@ -44,16 +44,30 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - Seção de categorias
 
 - Produtos em destaque
-  - Cards de produtos
+  - Exibição dos produtos mais vendidos
+  - Cards de produtos reutilizáveis
   - Botão de favoritos
-  - Informações de preço e parcelamento
+  - Exibição de preço normal e promocional
+  - Cálculo automático do percentual de desconto
+  - Cálculo de parcelamento
+  - Carregamento das imagens dos produtos
 
-- Newsletter
-  - Campo para cadastro de e-mail
+- Ofertas
+  - Seleção dos produtos com maior percentual de desconto
+  - Evita repetição de produtos já exibidos em outras seções
 
-- Interface organizada por componentes
+- Produtos com estoque baixo
+  - Identificação de produtos com estoque reduzido
+  - Evita repetição com produtos em destaque e ofertas
 
-- Estrutura preparada para integração com JavaScript e backend
+- Integração com backend
+  - Consumo de produtos através de API REST
+  - Dados carregados dinamicamente do PostgreSQL
+
+- Organização modular
+  - Componentes React separados por responsabilidade
+  - Componente reutilizável para cards de produtos
+  - Estilos CSS organizados por seção/componente
 
 ---
 
@@ -119,31 +133,37 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - HTML5
 - CSS3
 - JavaScript
-
-### Back-end (Planejado)
+- React.js
+  
+### Back-end
 
 - Node.js
-- React.js
 - Express.js
 - REST API
 
-### Banco de Dados (Planejado)
+### Banco de Dados
 
-- MySQL
+- PostgreSQL
 
 ### Ferramentas
 
 - Git
 - GitHub
 - Visual Studio Code
-
+- Vite
+- npm
+  
 ---
 
 ## 📂 Organização do projeto
 
-- Estrutura modular de arquivos.
-- CSS separado por componentes.
-- Código organizado para facilitar manutenção e evolução.
+- Estrutura modular, separando páginas, componentes, serviços e estilos.
+- Componentes React organizados por responsabilidade, facilitando reutilização e manutenção.
+- CSS separado por componentes e seções, evitando concentração excessiva de estilos em um único arquivo.
+- Separação entre front-end e back-end, mantendo responsabilidades bem definidas.
+- Comunicação com o back-end realizada por meio de uma API REST.
+- Estrutura preparada para facilitar a adição de novas funcionalidades e seções ao projeto.
+- Organização pensada para facilitar manutenção, escalabilidade e evolução do código.
 
 ---
 
