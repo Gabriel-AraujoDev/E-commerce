@@ -1,13 +1,15 @@
 .main-content,
 .best-deals,
-.best-eletronics-deals {
+.best-eletronics-deals,
+.low-stock-products {
     margin-top: 2rem;
     padding-inline: 4vw;
 }
 
 .featured-products-header,
 .best-deals-header,
-.best-eletronics-deals-header {
+.best-eletronics-deals-header,
+.low-stock-products-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +17,8 @@
 
 .featured-products-title,
 .best-deals-title,
-.best-eletronics-deals-title {
+.best-eletronics-deals-title,
+.low-stock-products-title {
     font-size: 1.125rem;
     font-weight: 700;
     color: #111111;
@@ -23,7 +26,8 @@
 
 .featured-products-link,
 .best-deals-link,
-.best-eletronics-deals-link {
+.best-eletronics-deals-link,
+.low-stock-products-link {
     display: flex;
     align-self: center;
     justify-content: center;
@@ -33,7 +37,8 @@
 
 .all-featured-products-text,
 .all-best-deals-text,
-.all-best-eletronics-deals-text {
+.all-best-eletronics-deals-text,
+.all-low-stock-products-text {
     color: #000000;
     font-size: 1rem;
     font-weight: 600;
@@ -43,6 +48,7 @@
     position: relative;
 
     width: 220px;
+    height: 340px;
     padding: 0.75rem;
 
     display: flex;
@@ -77,11 +83,12 @@
     height: 1.3rem;
 }
 
-.products-grid{
-    display: flex;
-    align-items: center;
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 220px);
     justify-content: space-between;
     margin-top: 2rem;
+    gap: 2rem;
 }
 
 .product-info{
@@ -122,4 +129,3 @@
 
     object-fit: contain;
 }
-
