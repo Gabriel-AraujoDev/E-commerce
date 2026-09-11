@@ -11,8 +11,6 @@
     </head>
 
     <body>
-        <div id="root"></div>
-        
         <header class="site-header" role="banner">
             <aside class="top-strip">
                 <div class="shipping-banner">
@@ -151,31 +149,87 @@
         </header>
 
         <section class="banner" aria-label="Banner promocional">
+            <div id="banners-root"></div>
+
             <div class="banner-slider">
-                <img src="/assets/images/banner-1.png" alt="Banner 1" class="banner-slide active" fetchpriority="high">
-                <img src="/assets/images/banner-2.png" alt="Banner 2" class="banner-slide">
-                <img src="/assets/images/banner-3.png" alt="Banner 3" class="banner-slide">
+                <div class="banner-track">
 
-                <div class="banner-overlay">
-                    <div class="banner-content">
-                        <h2 class="banner-title">
-                            Tudo que você precisa, em um só lugar.
-                        </h2>
+                    <div class="banner-slide">
+                        <img
+                            src="/assets/images/banner-1.png"
+                            fetchpriority="high"
+                            alt="Banner 1"
+                        >
 
-                        <p class="banner-description">
-                            Qualidade, variedade e os melhores preços para o seu dia a dia.
-                        </p>
+                        <div class="banner-overlay">
+                            <div class="banner-content">
+                                <h2 class="banner-title">
+                                    Tudo que você precisa, em um só lugar.
+                                </h2>
 
-                        <a href="#" class="banner-button">
-                            Comprar agora
-                        </a>
+                                <p class="banner-description">
+                                    Qualidade, variedade e os melhores preços para o seu dia a dia.
+                                </p>
+
+                                <a href="#" class="banner-button">
+                                    Comprar agora
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="banner-indicators">
-                        <button class="indicator active" aria-label="Banner 1"></button>
-                        <button class="indicator" aria-label="Banner 2"></button>
-                        <button class="indicator" aria-label="Banner 3"></button>
+                    <div class="banner-slide">
+                        <img
+                            src="/assets/images/banner-2.png"
+                            alt="Banner 2"
+                        >
+
+                        <div class="banner-overlay">
+                            <div class="banner-content">
+                                <h2 class="banner-title">
+                                    Tudo que você precisa, em um só lugar.
+                                </h2>
+
+                                <p class="banner-description">
+                                    Qualidade, variedade e os melhores preços para o seu dia a dia.
+                                </p>
+
+                                <a href="#" class="banner-button">
+                                    Comprar agora
+                                </a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="banner-slide">
+                        <img
+                            src="/assets/images/banner-3.png"
+                            alt="Banner 3"
+                        >
+
+                        <div class="banner-overlay">
+                            <div class="banner-content">
+                                <h2 class="banner-title">
+                                    Tudo que você precisa, em um só lugar.
+                                </h2>
+
+                                <p class="banner-description">
+                                    Qualidade, variedade e os melhores preços para o seu dia a dia.
+                                </p>
+
+                                <a href="#" class="banner-button">
+                                    Comprar agora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="banner-indicators">
+                    <button class="indicator active" aria-label="Banner 1"></button>
+                    <button class="indicator" aria-label="Banner 2"></button>
+                    <button class="indicator" aria-label="Banner 3"></button>
                 </div>
             </div>
         </section>
@@ -491,7 +545,7 @@
                 <p>&copy; 2026 Mercadão. Todos os direitos reservados.</p>
             </div>
         </footer>
-        <!-- <script src="" async defer></script> -->
-        <script type="module" src="src/main.jsx"></script>
     </body>
+        <script type="module" src="src/main.jsx"></script>
+        <script type="module" src="src/scripts/banner/banner.js"></script>
 </html>

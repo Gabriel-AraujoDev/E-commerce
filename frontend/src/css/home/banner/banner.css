@@ -8,20 +8,9 @@
     position: relative;
 }
 
-.banner-slide {
-    width: 100%;
-    height: auto;
-    display: none;
-    border-radius: 10px;
-}
-
 .banner-overlay {
     position: absolute;
     inset: 0;
-}
-
-.banner-slide.active {
-    display: block;
 }
 
 .banner-content {
@@ -93,5 +82,36 @@
     transition: background-color 0.3s ease-in-out;
 }
 
+.banner-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
 
+.banner-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
+.banner-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+.banner-slide {
+    position: relative;
+    flex: 0 0 100%;
+}
+
+.banner-slide > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+}
