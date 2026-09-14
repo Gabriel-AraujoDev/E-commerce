@@ -1,93 +1,12 @@
 import BestDeals from "../components/products/best-deals-products";
 import FeaturedProducts from "../components/products/featured-products"
 import LowStockProducts from "../components/products/low-stock-products"
+import Banner from "../components/banner/banner";
 
 function Home() {
     return (
         <>
-            <section className="banner" aria-label="Banner promocional">
-                <div className="banner-slider">
-                    <div className="banner-track">
-
-                        <div className="banner-slide">
-                            <img
-                                src="/assets/images/banner-1.png"
-                                fetchPriority="high"
-                                alt=""
-                            />
-
-                            <div className="banner-overlay">
-                                <div className="banner-content">
-                                    <h2 className="banner-title">
-                                        Tudo que você precisa, em um só lugar.
-                                    </h2>
-
-                                    <p className="banner-description">
-                                        Qualidade, variedade e os melhores preços para o seu dia a dia.
-                                    </p>
-
-                                    <a href="#" className="banner-button">
-                                        Comprar agora
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="banner-slide">
-                            <img
-                                src="/assets/images/banner-2.png"
-                                alt=""
-                            />
-
-                            <div className="banner-overlay">
-                                <div className="banner-content">
-                                    <h2 className="banner-title">
-                                        Tudo que você precisa, em um só lugar.
-                                    </h2>
-
-                                    <p className="banner-description">
-                                        Qualidade, variedade e os melhores preços para o seu dia a dia.
-                                    </p>
-
-                                    <a href="#" className="banner-button">
-                                        Comprar agora
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="banner-slide">
-                            <img
-                                src="/assets/images/banner-3.png"
-                                alt=""
-                            />
-
-                            <div className="banner-overlay">
-                                <div className="banner-content">
-                                    <h2 className="banner-title">
-                                        Tudo que você precisa, em um só lugar.
-                                    </h2>
-
-                                    <p className="banner-description">
-                                        Qualidade, variedade e os melhores preços para o seu dia a dia.
-                                    </p>
-
-                                    <a href="#" className="banner-button">
-                                        Comprar agora
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className="banner-indicators">
-                        <button className="indicator active" type="button" aria-label="Banner 1"></button>
-                        <button className="indicator" type="button" aria-label="Banner 2"></button>
-                        <button className="indicator" type="button" aria-label="Banner 3"></button>
-                    </div>
-                </div>
-            </section>
+            <Banner />
 
             <main className="main-content">
                 <section className="featured-products">
