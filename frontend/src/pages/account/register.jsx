@@ -1,14 +1,14 @@
-function Login() {
+function Register() {
   return (
     <div>
-      <h1>Login</h1>
+      <h1>Register</h1>
       <form>
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
 }
 
-export default Login;
+export default Register;
