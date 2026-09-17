@@ -82,7 +82,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 ### Funcionalidades
 
-- [ ] Slider funcional no banner
+- [X] Slider funcional no banner
 - [ ] Barra de pesquisa dinâmica
 - [ ] Sistema de favoritos
 - [ ] Carrinho de compras
