@@ -131,7 +131,7 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 ### Front-end
 
 - HTML5
-- CSS3
+- SCSS
 - JavaScript
 - React.js
   
