@@ -1,0 +1,101 @@
+@use '../base/variables' as *;
+
+
+// Footer
+
+.site-footer {
+    margin-top: $section-spacing;
+    padding: 4vh 4vw;
+
+    background-color: #b3b3b330;
+    box-shadow: $shadow-product-card;
+}
+
+
+// Colunas
+
+.footer-column {
+    max-width: 20vw;
+}
+
+
+// Título e logo
+
+.footer-title {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    color: $text-dark;
+    font-weight: bold;
+}
+
+.footer-logo {
+    margin-bottom: 0.5rem;
+
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: $text-dark;
+}
+
+.footer-description {
+    margin-bottom: 5px;
+
+    font-size: 13px;
+    color: $text-dark;
+}
+
+
+// Redes sociais
+
+.social-media-list {
+    margin-top: 0.5rem;
+}
+
+.social-media-item {
+    margin-right: 10px;
+}
+
+.social-media-image {
+    width: 24px;
+    height: auto;
+}
+
+
+// Formas de pagamento
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.payment-method-image {
+    width: 40px;
+    height: auto;
+}
+
+.payment-method-image-pix {
+    width: 40px;
+    height: 40px;
+
+    background-color: white;
+}
+
+
+// Newsletter
+
+.newsletter-button-footer {
+    padding: 10px;
+
+    background-color: $bg-dark;
+    border: 1px solid $bg-dark;
+    border-radius: 0 $border-radius $border-radius 0;
+
+    color: white;
+    cursor: pointer;
+}
+
+.newsletter-button-image {
+    width: 40px;
+    height: 20px;
+}

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer className="site-footer">
-            <div className="footer-content">
-                <div className="footer-column">
+            <div className="footer-content flex items-center justify-between">
+                <div className="footer-column flex flex-column justify-center">
                     <h3 className="footer-logo">MERCADÃO</h3>
                     <p className="footer-description">O seu mercado online.</p>
                     <p className="footer-description">Variedade, qualidade e preços justos para facilitar a sua vida.</p>
                     
-                    <ul className="social-media-list">
+                    <ul className="social-media-list flex items-center">
                         <li className="social-media-item">
                             <a href="#" className="social-media-link">
                                 <img className="social-media-image" src="/assets/icons/footer/social-media/instagram-167-svgrepo-com.svg" alt="Instagram" loading="lazy"/>
@@ -76,14 +76,14 @@ function Footer() {
                     <p className="footer-description">Receba ofertas exclusivas em seu e-mail!</p>
                     
                     <form className="newsletter-form">
-                        <div className="newsletter-input-group">
+                        <div className="newsletter-input-group flex justify-center items-center">
                             <label className="accessibility-label" htmlFor="footer-newsletter-email">Digite seu e-mail para receber ofertas.</label>
                         
                             <input type="email" className="newsletter-input" placeholder="Digite seu e-mail" id="footer-newsletter-email"/>
 
                             <button
                                 type="submit"
-                                className="newsletter-button-footer"
+                                className="newsletter-button-footer flex items-center justify-center"
                                 aria-label="Inscrever-se">
                                 <img className="newsletter-button-image" src="/assets/icons/footer/arrow-right-white.svg" alt="" aria-hidden="true"/>
                             </button>
@@ -92,7 +92,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="footer-bottom">
+            <div className="footer-bottom flex justify-center items-center gap-4">
                 <p>&copy; 2026 Mercadão. Todos os direitos reservados.</p>
             </div>
         </footer>

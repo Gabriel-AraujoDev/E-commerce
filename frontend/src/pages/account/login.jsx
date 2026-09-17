@@ -1,5 +1,5 @@
 // deixar o header com só a logo e um footer apenas de copyright
-import "../../css/account/login/login.css";
+
 
 function Login() {
   return (

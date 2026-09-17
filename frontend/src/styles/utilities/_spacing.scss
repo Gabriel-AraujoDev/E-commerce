@@ -1,0 +1,13 @@
+@use '../base/variables' as *;
+
+.section-spacing {
+    margin-block: $section-spacing;
+}
+
+.content-padding {
+    padding-inline: $content-padding-inline;
+}
+
+.product-grid-gap {
+    gap: $product-grid-gap;
+}

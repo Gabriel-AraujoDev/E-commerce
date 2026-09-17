@@ -1,0 +1,56 @@
+@use '../../base/variables' as *;
+
+
+// Aviso
+
+.announcement {
+    margin-top: $section-spacing;
+    padding-inline: $content-padding-inline;
+}
+
+
+// Conteúdo do aviso
+
+.announcement-content {
+    gap: 10px;
+    padding: 30px 20px;
+
+    background-color: $bg-dark;
+    border-radius: $border-radius;
+
+    background-image: url("../../../../public/assets/images/announcement/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+// Título e descrição
+
+.announcement-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-light;
+}
+
+.announcement-description {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $text-light;
+}
+
+
+// Link
+
+.announcement-link {
+    padding: 10px 10px;
+    gap: 0.5rem;
+
+    font-size: 0.9rem;
+
+    color: $text-light;
+    background-color: $bg-dark;
+
+    border-radius: $border-radius;
+    box-shadow: $shadow-dark;
+}

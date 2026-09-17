@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <header className="site-header">
-            <aside className="top-strip">
-                <div className="shipping-banner">
+            <aside className="top-strip flex justify-around items-center">
+                <div className="shipping-banner flex justify-center items-center">
                     <img className="shipping-icon" src="/assets/icons/top-strip/shipping-icon.svg" alt=""/>
                     
                     <span className="shipping-text">Frete grátis em compras acima de R$199</span>
@@ -15,14 +15,14 @@ function Header() {
                     <span className="promo-text">5% OFF na primeira compra | CUPOM: BEMVINDO</span>
                 </div>
 
-                <div className="info-strip">
-                    <a className="assistance-info" href="#">
+                <div className="info-strip flex justify-center items-center">
+                    <a className="assistance-info flex justify-center items-center" href="#">
                         <img className="assistance-icon" src="/assets/icons/top-strip/assistance-icon.svg" alt=""/>
                         
                         <span className="assistance-text">Atendimento</span>
                     </a>
 
-                    <a className="help-info" href="#">
+                    <a className="help-info flex justify-center items-center" href="#">
                         <img className="help-icon" src="/assets/icons/top-strip/help-icon.svg" alt=""/>
                         
                         <span className="help-text">Ajuda</span>
@@ -30,30 +30,30 @@ function Header() {
                 </div>
             </aside>
 
-            <div className="main-header">
+            <div className="main-header flex items-center justify-between">
                 <h1 className="logo">
                     <Link to="/">MERCADÃO</Link>
                 </h1>
 
-                <form className="search" role="search">
+                <form className="search flex items-center" role="search">
                     <label className="accessibility-label" htmlFor="search-input">Buscar produtos no site.</label>
                     
                     <input type="text" className="search-input" placeholder="O que você está procurando?" id="search-input"/>
                     
-                    <button className="search-button" aria-label="Buscar produtos" type="submit">
+                    <button className="search-button flex justify-center items-center" aria-label="Buscar produtos" type="submit">
                         <img className="search-icon" src="/assets/icons/header/search-icon.svg" alt=""/>
                     </button>
                 </form>
 
                 <nav className="user-actions" aria-label="Ações do usuário">
-                    <ul className="actions-list">
+                    <ul className="actions-list flex justify-center items-center">
                        <li>
-                            <div className="account">
+                            <div className="account flex items-center">
                                 <a className="account-info" href="#">
                                     <img className="account-icon user-actions-icon" src="/assets/icons/header/user-actions/account-icon.svg" alt=""/>
                                 </a>
 
-                                <div className="account-info">
+                                <div className="account-info flex flex-column justify-center items-start">
                                     <Link className="account-link" to="/login">
                                         <span className="account-text">Entrar</span>
                                     </Link>
@@ -65,7 +65,7 @@ function Header() {
                             </div>
                        </li>
                             <li>
-                            <a className="favorites-link" href="#">
+                            <a className="favorites-link flex flex-column items-center justify-center" href="#">
                                 <img className="favorites-icon user-actions-icon" src="/assets/icons/header/user-actions/favorites-icon.svg" alt=""/>
                                 
                                 <span className="favorites-text">Favoritos</span>
@@ -73,7 +73,7 @@ function Header() {
                         </li>
 
                         <li>
-                            <a className="cart-link" href="#">
+                            <a className="cart-link flex flex-column items-center justify-center" href="#">
                                 <img className="cart-icon user-actions-icon" src="/assets/icons/header/user-actions/cart-icon.svg" alt=""/>
                                 
                                 <span className="cart-count">0</span>
@@ -85,18 +85,18 @@ function Header() {
                 </nav>
             </div>
 
-            <nav className="main-navigation" aria-label="Navegação principal">
+            <nav className="main-navigation flex justify-between items-center gap-8" aria-label="Navegação principal">
                 <ul className="categories-list">
                     <li>
-                        <a className="categories-link" href="#">
+                        <a className="categories-link flex justify-center items-center gap-2" href="#">
                             <img className="categories-icon" src="/assets/icons/header/main-navigation/hamburger.svg" alt=""/>
                             
-                            <span className="categories-text">Todas as categorias</span>
+                            <span className="categories-text $text-dark">Todas as categorias</span>
                         </a>
                     </li>
                 </ul>
 
-                <ul className="navigation-list">
+                <ul className="navigation-list flex justify-center items-center gap-8">
                     <li>
                         <a className="navigation-link" href="#">Ofertas</a>
                     </li>

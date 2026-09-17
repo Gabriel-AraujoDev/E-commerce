@@ -1,0 +1,42 @@
+@use '../../base/variables' as *;
+
+
+// Seção de confiança
+
+.trust-section {
+    margin-top: $section-spacing;
+    padding-inline: $content-padding-inline;
+}
+
+
+// Container
+
+.trust-container {
+    padding: 1.5rem 2rem;
+
+    background-color: $bg-category-card;
+    box-shadow: $shadow-product-card;
+    border-radius: $border-radius;
+}
+
+
+// Ícone
+
+.trust-icon {
+    width: 45px;
+    height: 45px;
+}
+
+
+// Título e descrição
+
+.trust-title {
+    font-size: 1rem;
+    color: $text-dark;
+    font-weight: bold;
+}
+
+.trust-description {
+    font-size: 0.875rem;
+    font-weight: 400;
+}

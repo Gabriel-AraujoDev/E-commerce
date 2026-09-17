@@ -1,0 +1,27 @@
+@use '../../base/variables' as *;
+
+// Navegação principal
+.main-navigation {
+    margin-top: 0.5rem;
+    padding-inline: $content-padding-inline;
+    width: 100%;
+    height: 100%;
+}
+
+// Lista de navegação e link de categorias
+.navigation-list, .categories-link {
+    font-size: 0.95rem;
+}
+
+// Ícone das categorias
+.categories-icon {
+    width: 1.7rem;
+    height: auto;
+}
+
+// Texto das categorias
+.categories-text {
+    color: $text-dark;
+    font-size: 1rem;
+    font-weight: 700;
+}

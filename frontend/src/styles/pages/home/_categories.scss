@@ -1,0 +1,62 @@
+@use '../../base/variables' as *;
+
+
+// Categorias
+
+.categories {
+    margin-top: $section-spacing;
+    padding-inline: $content-padding-inline;
+}
+
+
+// Título
+
+.categories-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #262626;
+}
+
+.all-categories-text {
+    color: #262626;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+// Navegação
+
+.categories-nav {
+    margin-top: 2rem;
+}
+
+
+// Ícone da categoria
+
+.category-icon {
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+
+    background-color: $bg-category-card;
+    box-shadow: $shadow-product-card;
+    border-radius: 50px;
+}
+
+.category-icon img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    image-rendering: auto;
+}
+
+
+// Nome da categoria
+
+.category-name {
+    margin-top: 1rem;
+
+    font-weight: 600;
+    color: $text-dark;
+}

@@ -1,4 +1,35 @@
 function ProductCard ( {product} ) {
+    function getCategorieName(id) {
+        switch (id) {
+            case 1:    
+
+                return "Masculino"
+            case 2:
+    
+                return "Feminino"
+            case 3:
+                
+                return "Acessórios"
+            case 4:
+                
+                return "Eletrônicos"
+            case 5:
+                
+                return "Casa"
+            case 6:
+                
+                return "Esportes"
+            case 7:
+                
+                return "Beleza"
+            case 8:
+                
+                return "Calçados"
+            default:
+                return "";
+        }
+    }
+
     return (
         <article className="product-card" key={product.id}>
             <button className="favorite-button" aria-label="Adicionar aos favoritos">
@@ -14,9 +45,9 @@ function ProductCard ( {product} ) {
                 loading="lazy"
             />
 
-            <div className="product-info">
+            <div className="product-info flex flex-column">
                 <h3 className="product-name">{product.nome}</h3>
-                <p className="product-category">{product.categoria}</p>
+                <p className="product-category">{getCategorieName(product.categoria_id)}</p>
 
                 {product.preco_promocional ? (
                     <div className="product-price-container">

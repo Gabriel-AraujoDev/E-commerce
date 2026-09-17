@@ -1,0 +1,11 @@
+@use './variables' as *;
+
+body {
+    background-color: $bg-light;
+    color: $text-dark;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

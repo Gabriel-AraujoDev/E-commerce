@@ -1,0 +1,38 @@
+// Cores de fundo
+$bg-dark: #262626;
+$bg-light: #f5f5f5;
+
+// Cores de texto
+$text-light: #f5f5f5;
+$text-dark: #262626;
+$text-muted: #595959;
+
+// Cores de elementos
+$bg-category-card: #b3b3b330;
+
+// Sombras
+$shadow-dark: 0 1px 2px #333333;
+$shadow-product-card: inset 0 0 1px 1px #dadada;
+
+// Espaçamento 
+$section-spacing: 2rem;
+$product-grid-gap: 2rem;
+$content-padding-inline: 4vw;
+
+// Outros
+$border-radius: 10px;
+
+// Animações
+
+$transition-fast: 0.2s ease;
+$transition-banner: 0.4s ease;
+
+$hover-opacity: 0.6;
+$hover-opacity-light: 0.95;
+
+$hover-scale-card: 1.025;
+$hover-scale-category: 1.05;
+$hover-scale-favorite: 1.1;
+
+$hover-arrow-distance: 1px;
+$hover-indicator-width: 36px;

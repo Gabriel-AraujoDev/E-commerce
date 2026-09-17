@@ -1,0 +1,113 @@
+@use '../../base/variables' as *;
+
+
+// Seções de produtos
+
+.main-content,
+.best-deals,
+.best-eletronics-deals,
+.low-stock-products {
+    margin-top: $section-spacing;
+    padding-inline: $content-padding-inline;
+}
+
+
+// Títulos das seções
+
+.featured-products-title,
+.best-deals-title,
+.best-eletronics-deals-title,
+.low-stock-products-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $text-dark;
+}
+
+.all-featured-products-text,
+.all-best-deals-text,
+.all-best-eletronics-deals-text,
+.all-low-stock-products-text {
+    color: $text-dark;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+// Grid de produtos
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 220px);
+    justify-content: space-between;
+
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+
+// Card do produto
+
+.product-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 220px;
+    height: 340px;
+    padding: 0.75rem;
+
+    background-color: $bg-category-card;
+    box-shadow: $shadow-product-card;
+    border-radius: $border-radius;
+}
+
+
+// Imagem do produto
+
+.product-image {
+    width: 200px;
+    height: 180px;
+
+    object-fit: contain;
+}
+
+
+// Informações do produto
+
+.product-info {
+    margin-top: 12px;
+    gap: 6px;
+}
+
+.product-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $bg-dark;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $text-muted;
+}
+
+.product-price {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #007a03;
+}
+
+.product-installments {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: $bg-dark;
+}
+
+
+// Favoritos
+
+.favorite-button img {
+    width: 1.3rem;
+    height: 1.3rem;
+}

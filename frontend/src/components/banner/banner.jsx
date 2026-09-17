@@ -77,14 +77,14 @@ function Banner() {
     return (
         <section className="banner" aria-label="Banner promocional">
             <div className="banner-slider">
-                <div className="banner-track">
+                <div className="banner-track flex">
                     <div className="banner-slide">
                         <img src="/assets/images/banners/banner-1.png" fetchPriority="high" alt="" />
                         <div className="banner-overlay">
-                            <div className="banner-content">
+                            <div className="banner-content flex flex-column gap-5">
                                 <h2 className="banner-title-black-left">Tudo que você precisa, em um só lugar.</h2>
                                 <p className="banner-description-black-left">Qualidade, variedade e os melhores preços para o seu dia a dia.</p>
-                                <a href="#" className="banner-button-black-left">Compre agora</a>
+                                <a href="#" className="banner-button-black-left flex justify-center items-center">Compre agora</a>
                             </div>
                         </div>
                     </div>
@@ -92,10 +92,10 @@ function Banner() {
                     <div className="banner-slide">
                         <img src="/assets/images/banners/banner-2.png" alt="" />
                         <div className="banner-overlay">
-                            <div className="banner-content">
+                            <div className="banner-content flex flex-column gap-5">
                                 <h2 className="banner-title-white-left">Ofertas que valem a pena.</h2>
                                 <p className="banner-description-white-left">Encontre seus produtos favoritos com preços especiais por tempo limitado.</p>
-                                <a href="#" className="banner-button-black-left">Aproveitar ofertas</a>
+                                <a href="#" className="banner-button-black-left flex justify-center items-center">Aproveitar ofertas</a>
                             </div>
                         </div>
                     </div>
@@ -103,16 +103,16 @@ function Banner() {
                     <div className="banner-slide">
                         <img src="/assets/images/banners/banner-3.png" alt="" />
                         <div className="banner-overlay">
-                            <div className="banner-content-right">
+                            <div className="banner-content-right flex flex-column gap-5">
                                 <h2 className="banner-title-white-right">Receba seu pedido com facilidade.</h2>
                                 <p className="banner-description-white-right">Frete grátis acima de R$199 e condições especiais para você comprar com tranquilidade.</p>
-                                <a href="#" className="banner-button-black-right">Compre agora</a>
+                                <a href="#" className="banner-button-black-right flex justify-center items-center">Compre agora</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="banner-indicators">
+                <div className="banner-indicators flex">
                     <button className="indicator active" type="button" aria-label="Banner 1"></button>
                     <button className="indicator" type="button" aria-label="Banner 2"></button>
                     <button className="indicator" type="button" aria-label="Banner 3"></button>
