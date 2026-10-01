@@ -1,6 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
+function useMobile() {
+    const [isMobile, setIsMobile] = useState(
+        window.matchMedia("(max-width: 479px)").matches
+    );
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 479px)");
+
+        const handleChange = () => {
+            setIsMobile(mediaQuery.matches);
+        };
+
+        mediaQuery.addEventListener("change", handleChange);
+
+        return () => {
+            mediaQuery.removeEventListener("change", handleChange);
+        };
+    }, []);
+
+    return isMobile;
+}
 
 function Banner() {
+    const isMobile = useMobile();
+
     useEffect(() => {
         const bannerTrack = document.querySelector(".banner-track");
         const indicators = document.querySelectorAll(".indicator");
@@ -68,9 +92,53 @@ function Banner() {
             observer.observe(bannerSlider);
         }
 
-        setupIndicatorEvents();
         setupVisibilityObserver();
         autoChangeBanner();
+        
+        if (!isMobile) {
+            setupIndicatorEvents();
+        } else {
+            const slide = document.querySelector(".banner-slide");
+
+            let startX = 0
+            let currentX = 0
+            if (slide) {
+                slide.addEventListener("touchstart", (event) => {
+                    startX = event.touches[0].clientX;
+                    currentX = startX;
+
+                    bannerTrack.style.transition = "none";
+                });
+
+                slide.addEventListener("touchmove", (event) => {
+                    event.preventDefault();
+
+                    currentX = event.touches[0].clientX;
+
+                    const deltaX = currentX - startX;
+
+                    bannerTrack.style.transform =
+                        `translateX(calc(-${index * 100}% + ${deltaX}px))`;
+                }, { passive: false });
+
+                slide.addEventListener("touchend", () => {
+                    const deltaX = currentX - startX;
+                    bannerTrack.style.transition = "transform 0.4s ease";
+
+                    if (deltaX < -80) {
+                        nextBanner();
+                    }
+
+                    if (deltaX > 80) {
+                        if (index < 0) {
+                            index = indicators.length - 1;
+                        }
+
+                        changeBanner(index)
+                    }
+                });
+            }
+        }
 
     }, []); 
 
@@ -82,9 +150,9 @@ function Banner() {
                         <img src="/assets/images/banners/banner-1.png" fetchPriority="high" alt="" />
                         <div className="banner-overlay">
                             <div className="banner-content flex flex-column gap-5">
-                                <h2 className="banner-title-black-left">Tudo que você precisa, em um só lugar.</h2>
-                                <p className="banner-description-black-left">Qualidade, variedade e os melhores preços para o seu dia a dia.</p>
-                                <a href="#" className="banner-button-black-left flex justify-center items-center">Compre agora</a>
+                                <h2 className="banner-title-black-left banner-title">Tudo que você precisa, em um só lugar.</h2>
+                                <p className="banner-description-black-left banner-description">Qualidade, variedade e os melhores preços para o seu dia a dia.</p>
+                                <a href="#" className="banner-button-black-left banner-button flex justify-center items-center">Compre agora</a>
                             </div>
                         </div>
                     </div>
@@ -93,9 +161,9 @@ function Banner() {
                         <img src="/assets/images/banners/banner-2.png" alt="" />
                         <div className="banner-overlay">
                             <div className="banner-content flex flex-column gap-5">
-                                <h2 className="banner-title-white-left">Ofertas que valem a pena.</h2>
-                                <p className="banner-description-white-left">Encontre seus produtos favoritos com preços especiais por tempo limitado.</p>
-                                <a href="#" className="banner-button-black-left flex justify-center items-center">Aproveitar ofertas</a>
+                                <h2 className="banner-title-white-left banner-title">Ofertas que valem a pena.</h2>
+                                <p className="banner-description-white-left banner-description">Encontre seus produtos favoritos com preços especiais por tempo limitado.</p>
+                                <a href="#" className="banner-button-black-left banner-button flex justify-center items-center">Aproveitar ofertas</a>
                             </div>
                         </div>
                     </div>
@@ -104,9 +172,9 @@ function Banner() {
                         <img src="/assets/images/banners/banner-3.png" alt="" />
                         <div className="banner-overlay">
                             <div className="banner-content-right flex flex-column gap-5">
-                                <h2 className="banner-title-white-right">Receba seu pedido com facilidade.</h2>
-                                <p className="banner-description-white-right">Frete grátis acima de R$199 e condições especiais para você comprar com tranquilidade.</p>
-                                <a href="#" className="banner-button-black-right flex justify-center items-center">Compre agora</a>
+                                <h2 className="banner-title-white-right banner-title">Receba seu pedido com facilidade.</h2>
+                                <p className="banner-description-white-right banner-description">Frete grátis acima de R$199 e condições especiais para você comprar com tranquilidade.</p>
+                                <a href="#" className="banner-button-black-right banner-button flex justify-center items-center">Compre agora</a>
                             </div>
                         </div>
                     </div>

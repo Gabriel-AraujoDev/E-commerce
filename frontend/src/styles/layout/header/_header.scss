@@ -1,35 +1,51 @@
 @use '../../base/variables' as *;
+@use '../../utilities/responsive' as *;
 
-/* --- Layout Principal --- */
+
+// header
+
 .main-header {
     padding: 4vh 4vw;
 }
 
-.logo a {
-    font-size: 2rem;
-    font-weight: 800;
-    color: $text-dark;
+.categories-chevron-icon {
+    display: none;
 }
 
-/* --- Acessibilidade --- */
-.accessibility-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+.mobile-menu {
+    display: none!important;
 }
 
-/* --- Barra de Pesquisa --- */
+.mobile-menu-overlay {
+    display: none!important;
+}
+// logo
+
+.logo {
+
+    a {
+        font-size: 2rem;
+        font-weight: 800;
+        color: $text-dark;
+        text-decoration: none;
+    }
+}
+
+
+// hamburger
+
+.hamburger-button {
+    display: none;
+}
+
+// search
+
 .search {
     width: fit-content;
     height: 48px;
     background: #f1f1f1;
     border: 1px solid #dadada;
-    border-radius: 999px;
+    border-radius: $border-radius;
     overflow: hidden;
 }
 
@@ -39,7 +55,7 @@
     padding: 0 20px;
     background: transparent;
     font-size: 0.9rem;
-    letter-spacing: -.2px;
+    letter-spacing: -0.2px;
 }
 
 .search-button {
@@ -55,7 +71,9 @@
     height: auto;
 }
 
-/* --- Ações do Usuário --- */
+
+// actions
+
 .actions-list {
     gap: 4vw;
 }
@@ -64,7 +82,9 @@
     width: 35px;
 }
 
-/* --- Seção de Conta --- */
+
+// account
+
 .account-icon {
     width: 40px;
 }
@@ -78,7 +98,7 @@
     margin-bottom: 4px;
 }
 
-.account-text, 
+.account-text,
 .favorites-text,
 .cart-text {
     margin-top: 1px;
@@ -89,7 +109,7 @@
 
 .account-text {
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .account-subtext {
@@ -98,10 +118,11 @@
     color: $text-dark;
 }
 
-/* --- Favoritos e Carrinho --- */
+
+// cart
+
 .cart-link {
     position: relative;
-    text-decoration: none;
     color: #000;
 }
 
@@ -109,15 +130,275 @@
     position: absolute;
     top: -4px;
     right: -2px;
+
     width: 16px;
     height: 16px;
-    border-radius: 50%;
-    background: $bg-dark;
-    color: $text-light;
-    border: 1px solid #f5f5f5;
-    font-size: 10px;
-    font-weight: 700;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: 1px solid #f5f5f5;
+    border-radius: 50%;
+
+    background: $bg-dark;
+    color: $text-light;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+// mobile
+
+@include mobile {
+
+    // header
+
+    .main-header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 4vh 4vw 0;
+    }
+
+
+    // hamburger
+
+    .hamburger-button {
+        display: block;
+    }
+
+    .hamburger-image {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    // logo
+
+    .site-logo-link {
+        flex: 1;
+        font-size: 1.35rem;
+    }
+
+
+    // actions
+
+    .user-actions {
+        margin-bottom: 3px;
+    }
+
+    // account
+
+    .account {
+        gap: 3px;
+    }
+
+    .account-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .account-info {
+        width: 28px;
+        height: 28px;
+        margin-left: 0;
+        display: block;
+    }
+
+    .account-link {
+        margin: 0;
+    }
+
+    .favorites-link,
+    .cart-link,
+    .register-link {
+        display: none !important;
+    }
+
+
+    // search
+
+    .search {
+        order: 3;
+        justify-content: center;
+        padding: 0 7px;
+        flex-basis: 100%;
+        width: 100%;
+        height: 46px;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 0 10px 0 14px;
+        font-size: 0.85rem;
+    }
+
+    .search-button {
+        width: 48px;
+    }
+
+    .search-icon {
+        width: 21px;
+    }
+
+
+    // navigation
+
+    .main-navigation {
+        display: block;
+        width: 100%;
+        padding: 0 16px 14px;
+        border: none;
+    }
+
+    .navigation-list {
+        display: none !important;
+    }
+
+
+    // categories
+
+    .categories-list {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .categories-list li {
+        width: 100%;
+    }
+
+    .categories-link-header {
+        width: 100%;
+        height: 46px;
+        padding: 0 14px;
+        gap: 1.2rem!important;
+        background: #f1f1f1;
+        border: 1px solid #dadada;
+        border-radius: $border-radius;
+    }
+
+    .categories-icon {
+        width: 21px;
+        height: 21px;
+    }
+
+    .categories-text {
+        flex: 1;
+
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-align: left;
+        color: $text-dark;
+    }
+
+    .categories-chevron-icon {
+        display: block;
+        
+        width: 40px;
+        height: 40px;
+    }
+
+    .mobile-menu {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 80%;
+        height: 100vh;
+
+        transform: translateX(-100%);
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+        padding: 1.25rem;
+
+        background-color: $bg-light;
+        box-shadow: $shadow-dark;
+        z-index: 1;
+    }
+
+    .mobile-menu.open {
+        transform: translateX(0);
+    }
+
+    .mobile-menu-overlay {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 20%;
+        height: 100vh;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            opacity 0.4s ease,
+            visibility 0.4s ease;
+
+        background-color: #00000067;
+        z-index: 1;
+    }
+
+    .site-logo-mobile-menu {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: $text-dark;
+    }
+
+    .mobile-menu-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .close-mobile-menu-buttom {
+        width: 30px;
+        height: 30px;
+
+        padding: 5px;
+        font-size: large;
+    }
+
+    .mobile-menu-item, .mobile-menu-header {
+        height: 30px;
+        width: 100%;
+
+        margin-bottom: 12.5px;
+    }
+
+    .mobile-menu-divider {
+        width: 100%;
+        height: 1px;
+
+        margin-bottom: 12.5px;
+        background-color: #59595927;
+    }
+
+    .mobile-menu-category-arrow-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mobile-menu-category-image {
+        width: 20px;
+        height: 30px;
+    }
+
+    .mobile-menu-category-name {
+        height: 30px;
+
+        display: flex;
+        align-items: center;
+
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .close-mobile-menu-icon {
+        object-fit: contain;
+    }
 }

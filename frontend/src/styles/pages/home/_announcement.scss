@@ -1,5 +1,5 @@
 @use '../../base/variables' as *;
-
+@use '../../utilities/responsive' as *;
 
 // Aviso
 
@@ -53,4 +53,22 @@
 
     border-radius: $border-radius;
     box-shadow: $shadow-dark;
+}
+
+@include mobile {
+    .announcement-content {
+        gap: 1rem;
+    }
+    .announcement-title {
+        font-size: .9rem;
+    }
+
+    .announcement-description {
+        font-size: .775rem;
+        width: 237.5px;
+    }
+
+    .announcement-link {
+        font-size: .8rem;
+    }
 }

@@ -1,5 +1,5 @@
 @use '../../base/variables' as *;
-
+@use '../../utilities/responsive' as *;
 
 // Seção de confiança
 
@@ -37,6 +37,26 @@
 }
 
 .trust-description {
-    font-size: 0.875rem;
+    font-size: .875rem;
     font-weight: 400;
+}
+
+@include mobile {
+    .trust-container {
+        display: grid!important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .trust-title {
+        font-size: .8rem;
+    }
+
+    .trust-description {
+        font-size: .675rem;
+    }
+
+    .trust-icon {
+        display: none;
+    }
 }

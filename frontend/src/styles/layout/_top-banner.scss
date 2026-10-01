@@ -1,34 +1,91 @@
 @use '../base/variables' as *;
+@use '../utilities/responsive' as *;
+
+
+// top strip
 
 .top-strip {
-    padding: 10px 0;
-    gap: 10vw;
-    height: 50px;
     width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    gap: 10vw;
 
     background-color: $bg-dark;
-    text-align: center;
     color: $text-light;
+    text-align: center;
+
     box-shadow: 0 1px 2px #333333;
 }
 
-.assistance-icon, .help-icon {
-    margin-right: 15px;
+.top-strip-button {
+    display: none;
+}
+
+
+// icons
+
+.assistance-icon,
+.help-icon {
     width: 25px;
     height: auto;
+    margin-right: 15px;
 }
 
 .shipping-icon {
-    margin-right: 5px;
     width: 30px;
     height: auto;
+    margin-right: 5px;
 }
+
+
+// text
 
 .top-strip span {
     font-size: 0.8rem;
 }
 
 
+// info
+
 .info-strip {
     gap: 1vw;
+}
+
+
+// mobile
+
+@include mobile {
+
+    .top-strip {
+        height: 48px;
+        padding: 0 16px;
+
+        justify-content: center !important;
+    }
+
+    .top-strip span {
+        display: inline;
+
+        font-size: 0.7rem;
+        line-height: 1;
+        white-space: nowrap;
+
+        transform: translateY(1px);
+    }
+
+    .assistance-icon,
+    .help-icon,
+    .shipping-icon,
+    .promo-banner,
+    .info-strip {
+        display: none !important;
+    }
+
+    .top-strip-button,
+    .top-strip-chevron-icon {
+        display: block;
+        
+        width: 30px;
+        height: 30px;
+    }
 }

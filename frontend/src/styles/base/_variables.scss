@@ -1,6 +1,7 @@
 // Cores de fundo
 $bg-dark: #262626;
 $bg-light: #f5f5f5;
+$bg-muted: #595959;
 
 // Cores de texto
 $text-light: #f5f5f5;
@@ -23,7 +24,6 @@ $content-padding-inline: 4vw;
 $border-radius: 10px;
 
 // Animações
-
 $transition-fast: 0.2s ease;
 $transition-banner: 0.4s ease;
 
@@ -36,3 +36,9 @@ $hover-scale-favorite: 1.1;
 
 $hover-arrow-distance: 1px;
 $hover-indicator-width: 36px;
+
+// Breakpoints
+$bp-large: 1280px;
+$bp-desktop: 1024px;
+$bp-tablet: 768px;
+$bp-mobile: 480px;

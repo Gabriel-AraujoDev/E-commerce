@@ -1,5 +1,5 @@
 @use '../../base/variables' as *;
-
+@use '../../utilities/responsive' as *;
 
 // Categorias
 
@@ -7,7 +7,6 @@
     margin-top: $section-spacing;
     padding-inline: $content-padding-inline;
 }
-
 
 // Título
 
@@ -59,4 +58,19 @@
 
     font-weight: 600;
     color: $text-dark;
+}
+
+@include mobile {
+    .categories-title {
+        font-size: 1rem;
+    }
+
+    .categories-nav {
+        display: grid!important;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-name {
+        font-size: .9rem;
+    }
 }

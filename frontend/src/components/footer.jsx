@@ -79,7 +79,7 @@ function Footer() {
                         <div className="newsletter-input-group flex justify-center items-center">
                             <label className="accessibility-label" htmlFor="footer-newsletter-email">Digite seu e-mail para receber ofertas.</label>
                         
-                            <input type="email" className="newsletter-input" placeholder="Digite seu e-mail" id="footer-newsletter-email"/>
+                            <input type="email" className="newsletter-footer-input" placeholder="Digite seu e-mail" id="footer-newsletter-email"/>
 
                             <button
                                 type="submit"

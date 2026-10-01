@@ -116,7 +116,7 @@ function Home() {
                         Navegue por categoria
                     </h2>
 
-                    <a href="#" className="categories-link">
+                    <a href="#" className="categories-link flex items-center justify-center gap-2">
                         <span className="all-categories-text">Ver todas</span>
 
                         <img className="arrow-icon" src="/assets/icons/categories/arrow-right.svg" loading="lazy" alt=""/>
@@ -185,7 +185,7 @@ function Home() {
             <section className="trust-section" aria-labelledby="trust-section-title">
                 <div className="trust-container flex justify-between">
                     <div className="trust-card flex items-center gap-4">
-                        <div className="trust-icon"><img src="/assets/icons/trust-icons/free-shipping.svg" className="trust-icon" alt="" loading="lazy"/></div>
+                        <div className="trust-icon"><img src="/assets/icons/trust-icons/free-shipping.svg" className="trust-icon-image" alt="" loading="lazy"/></div>
                     
                         <div className="trust-content">
                             <h2 className="trust-title">Frete Grátis</h2>
@@ -195,7 +195,7 @@ function Home() {
                     </div>
 
                     <div className="trust-card flex items-center gap-4">
-                        <div className="trust-icon"><img src="/assets/icons/trust-icons/installment-plan.svg" className="trust-icon" alt="" loading="lazy"/></div>
+                        <div className="trust-icon"><img src="/assets/icons/trust-icons/installment-plan.svg" className="trust-icon-image" alt="" loading="lazy"/></div>
                         
                         <div className="trust-content">
                             <h2 className="trust-title">Parcele em até 10x</h2>
@@ -205,7 +205,7 @@ function Home() {
                     </div>
 
                     <div className="trust-card flex items-center gap-4">
-                        <div className="trust-icon"><img src="/assets/icons/trust-icons/trade.svg" className="trust-icon" alt="" loading="lazy"/></div>
+                        <div className="trust-icon"><img src="/assets/icons/trust-icons/trade.svg" className="trust-icon-image" alt="" loading="lazy"/></div>
                         
                         <div className="trust-content">
                             <h2 className="trust-title">Troca fácil</h2>
@@ -215,7 +215,7 @@ function Home() {
                     </div>
 
                     <div className="trust-card flex items-center gap-4">
-                        <div className="trust-icon"><img src="/assets/icons/trust-icons/safe.svg" className="trust-icon" alt="" loading="lazy"/></div>
+                        <div className="trust-icon"><img src="/assets/icons/trust-icons/safe.svg" className="trust-icon-image" alt="" loading="lazy"/></div>
                         
                         <div className="trust-content">
                             <h2 className="trust-title">Compra segura</h2>
@@ -225,6 +225,29 @@ function Home() {
                     </div>
                 </div>
             </section>
+
+            <nav className="mobile-bottom-nav ">
+                <a className="mobile-bottom-home-content mobile-bottom-content flex items-center flex-column justify-center mobile-bottom-active" href="#">
+                    <img src="/assets/icons/mobile-nav/home.svg" alt="" className="mobile-bottom-home-image mobile-bottom-image"/>
+                    <span className="mobile-bottom-home-span mobile-bottom-span" >Início</span>
+                </a>
+
+                <a className="mobile-bottom-categories-content mobile-bottom-content flex items-center flex-column justify-center" href="#">
+                    <img src="/assets/icons/mobile-nav/categories.svg" alt="" className="mobile-bottom-categories-image mobile-bottom-image"/>
+                    <span className="mobile-bottom-categories-span mobile-bottom-span" >Categorias</span>
+                </a>
+
+                <a className="mobile-bottom-favorites-content mobile-bottom-content flex items-center flex-column justify-center" href="#">
+                    <img src="/assets/icons/mobile-nav/favorites.svg" alt="" className="mobile-bottom-favorites-image mobile-bottom-image"/>
+                    <span className="mobile-bottom-favorites-span mobile-bottom-span" >Favoritos</span>
+                </a>
+
+                <a className="mobile-bottom-cart-content mobile-bottom-content flex items-center flex-column justify-center" href="#">
+                    <span className="mobile-bottom-cart-count-span">0</span>
+                    <img src="/assets/icons/mobile-nav/cart.svg" alt="" className="mobile-bottom-cart-image mobile-bottom-image"/>
+                    <span className="mobile-bottom-cart-span mobile-bottom-span" >Carrinho</span>
+                </a>
+            </nav>
         </>
     );
 }

@@ -1,5 +1,5 @@
 @use '../base/variables' as *;
-
+@use '../utilities/responsive' as *;
 
 // Footer
 
@@ -98,4 +98,48 @@
 .newsletter-button-image {
     width: 40px;
     height: 20px;
+}
+
+// Campo de e-mail
+
+.newsletter-footer-input {
+    padding: 0.75rem;
+    min-width: 14.5rem;
+
+    color: $text-dark;
+    border-radius: $border-radius 0 0 $border-radius;
+    border: 1px solid white;
+    font-weight: 600;
+}
+
+.newsletter-footer-input::placeholder {
+    color: $text-muted;
+}
+
+@include mobile {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start!important;
+        gap: 2rem;
+
+        margin-bottom: 20px;
+    }
+
+    .footer-column {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .payment-methods {
+        grid-template-columns: repeat(3, auto);
+        justify-content: start;
+    }
+    
+    .newsletter-footer-input {
+        min-height: 43.5px;
+    }
+
+    .footer-bottom {
+        margin-bottom: 50px;
+    }
 }

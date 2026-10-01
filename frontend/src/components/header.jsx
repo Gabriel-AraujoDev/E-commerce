@@ -1,11 +1,12 @@
-import React from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
+    const [menuOpen, setMenuOpen] =  useState(false);
     return (
         <header className="site-header">
-            <aside className="top-strip flex justify-around items-center">
-                <div className="shipping-banner flex justify-center items-center">
+            <aside className="top-strip flex justify-between items-center">
+                <div className="shipping-banner flex items-center">
                     <img className="shipping-icon" src="/assets/icons/top-strip/shipping-icon.svg" alt=""/>
                     
                     <span className="shipping-text">Frete grátis em compras acima de R$199</span>
@@ -28,21 +29,153 @@ function Header() {
                         <span className="help-text">Ajuda</span>
                     </a>
                 </div>
+
+                <button className="top-strip-button">
+                    <img src="/assets/icons/header/white-chevron-icon.svg" className="top-strip-chevron-icon" alt="" />
+                </button>
             </aside>
 
-            <div className="main-header flex items-center justify-between">
-                <h1 className="logo">
-                    <Link to="/">MERCADÃO</Link>
-                </h1>
+            <div className="main-header flex items-center justify-between gap-5">
+                <div className="header-brand flex items-center justify-center gap-2">
+                    <button className="hamburger-button" type="button" onClick={() => setMenuOpen(true)}>
+                        <img
+                            src="/assets/icons/header/main-navigation/hamburger.svg"
+                            className="hamburger-image"
+                            alt="Abrir menu"
+                        />
+                    </button>
+
+                    <nav className={`mobile-menu ${menuOpen ? "open" : ""} flex flex-column gap-5`}>
+                        <div className="mobile-menu-header flex items-center justify-between">
+                            <h2 className="site-logo-mobile-menu">Mercadão</h2>
+
+                            <button className="close-mobile-menu-buttom" onClick={() => setMenuOpen(false)}>
+                                <img className="close-mobile-menu-icon" src="/assets/icons/header/mobile-menu/close-icon.svg" alt="Fechar menu" />
+                            </button>
+                        </div>
+
+                        <ul className="mobile-menu-list">
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/offers.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Ofertas</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/news.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Novidades</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/featured-products.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Mais Vendidos</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-divider"></li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/t-shirt.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Masculino</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/dress.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Feminino</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/accessories.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Acessórios</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/home.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Casa</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/electronics.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Eletrônicos</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/sports.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Esportes</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+
+                            <li className="mobile-menu-item">
+                                <a href="#" className="mobile-menu-category-link flex flex-start justify-between">
+                                    <div className="mobile-menu-category-info flex items-center gap-3">
+                                        <img className="mobile-menu-category-image" src="/assets/icons/header/mobile-menu/categories/beauty.svg" alt="" />
+                                        <span className="mobile-menu-category-name">Beleza</span>
+                                    </div>
+                                    <img className="mobile-menu-category-arrow-image" src="/assets/icons/header/dark-chevron-icon.svg" alt="" />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div className={`mobile-menu-overlay ${menuOpen ? "open" : ""}`} onClick={() => setMenuOpen(false)}></div>
+
+                    <h1 className="site-logo flex items-center">
+                        <Link className="site-logo-link" to="/">
+                            MERCADÃO
+                        </Link>
+                    </h1>
+                </div>
 
                 <form className="search flex items-center" role="search">
-                    <label className="accessibility-label" htmlFor="search-input">Buscar produtos no site.</label>
-                    
-                    <input type="text" className="search-input" placeholder="O que você está procurando?" id="search-input"/>
-                    
                     <button className="search-button flex justify-center items-center" aria-label="Buscar produtos" type="submit">
                         <img className="search-icon" src="/assets/icons/header/search-icon.svg" alt=""/>
                     </button>
+                    
+                    <label className="accessibility-label" htmlFor="search-input">Buscar produtos no site.</label>
+                    
+                    <input type="text" className="search-input" placeholder="O que você está procurando?" id="search-input"/>
                 </form>
 
                 <nav className="user-actions" aria-label="Ações do usuário">
@@ -88,10 +221,12 @@ function Header() {
             <nav className="main-navigation flex justify-between items-center gap-8" aria-label="Navegação principal">
                 <ul className="categories-list">
                     <li>
-                        <a className="categories-link flex justify-center items-center gap-2" href="#">
+                        <a className="categories-link-header flex justify-center items-center gap-2" href="#">
                             <img className="categories-icon" src="/assets/icons/header/main-navigation/hamburger.svg" alt=""/>
                             
                             <span className="categories-text $text-dark">Todas as categorias</span>
+
+                            <img src="/assets/icons/header/dark-chevron-icon.svg" className="categories-chevron-icon" alt="" />
                         </a>
                     </li>
                 </ul>
