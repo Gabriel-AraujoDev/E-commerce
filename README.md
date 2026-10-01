@@ -8,7 +8,7 @@
 
 ![Preview da aplicação](./preview-image/mobile-home.jpeg)
 
-Um projeto de e-commerce desenvolvido com foco em utilizar os conceitos de Engenharia de Software, priorizando a organização, escalabilidade e boas práticas de desenvolvimento.
+Um projeto de e-commerce desenvolvido com foco na aplicação de conceitos de Engenharia de Software, buscando organização, escalabilidade, reutilização de componentes e boas práticas de desenvolvimento.
 
 > 🚧 Projeto em desenvolvimento.
 
@@ -16,23 +16,27 @@ Um projeto de e-commerce desenvolvido com foco em utilizar os conceitos de Engen
 
 ## 📖 Sobre
 
-O mercadão é um projeto que eu criei para evoluir técnicas e conhecimentos em desenvolvimento web e na engenharia de software.
+O Mercadão é um projeto desenvolvido para aprimorar meus conhecimentos em desenvolvimento web e Engenharia de Software.
 
-O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver uma aplicação completa, utilizando organização, que vai me ajudar na expansão de novas coisas no projeto atual.
+A proposta vai além da criação de uma interface de e-commerce. O projeto está sendo desenvolvido como uma aplicação completa, com front-end, back-end e banco de dados, mantendo uma estrutura organizada para facilitar a manutenção e a implementação de novas funcionalidades.
 
 ---
 
 ## 🎯 Objetivos
 
-- Desenvolver uma aplicação escalável.
+- Desenvolver uma aplicação escalável e organizada.
 - Aplicar HTML semântico.
-- Organizar o CSS em componentes independentes.
+- Utilizar componentes reutilizáveis.
+- Organizar os estilos por responsabilidade.
 - Manter um código limpo e de fácil manutenção.
-- Evoluir o projeto para uma aplicação Full Stack.
+- Desenvolver uma aplicação Full Stack.
+- Aplicar conceitos de Engenharia de Software durante o desenvolvimento.
 
 ---
 
 ## ✨ Funcionalidades atuais
+
+### Interface
 
 - Header completo
   - Faixa superior com informações e suporte
@@ -42,10 +46,18 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
   - Carrinho de compras
   - Menu de navegação principal
   - Navegação por categorias
+  - Menu mobile
+
+- Interface responsiva para dispositivos móveis
 
 - Banner principal
+  - Slider funcional
+  - Indicadores de navegação
+  - Navegação por toque em dispositivos móveis
 
 - Seção de categorias
+
+- Seção de benefícios
 
 - Produtos em destaque
   - Exibição dos produtos mais vendidos
@@ -64,14 +76,22 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
   - Identificação de produtos com estoque reduzido
   - Evita repetição com produtos em destaque e ofertas
 
-- Integração com backend
-  - Consumo de produtos através de API REST
-  - Dados carregados dinamicamente do PostgreSQL
+- Rodapé
 
-- Organização modular
-  - Componentes React separados por responsabilidade
-  - Componente reutilizável para cards de produtos
-  - Estilos CSS organizados por seção/componente
+- Animações e transições da interface
+
+### Integração
+
+- Consumo de produtos através de API REST
+- Dados carregados dinamicamente do PostgreSQL
+- Separação entre front-end e back-end
+
+### Organização
+
+- Componentes React separados por responsabilidade
+- Componentes reutilizáveis
+- Estilos organizados por seção e componente
+- Estrutura modular para facilitar manutenção e expansão
 
 ---
 
@@ -79,14 +99,15 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 
 ### Interface (Front-end)
 
-- [x] Adicionar seção de benefícios (frete, garantia e segurança)
-- [x] Desenvolver o rodapé
-- [x] Implementar animações e transições na interface
-- [ ] Melhorar a responsividade para diferentes dispositivos
+- [x] Seção de benefícios
+- [x] Rodapé
+- [x] Animações e transições
+- [x] Responsividade para dispositivos móveis
+- [ ] Melhorar responsividade para diferentes tamanhos de tela
 
 ### Funcionalidades
 
-- [X] Slider funcional no banner
+- [x] Slider funcional no banner
 - [ ] Barra de pesquisa dinâmica
 - [ ] Sistema de favoritos
 - [ ] Carrinho de compras
@@ -138,7 +159,8 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - SCSS
 - JavaScript
 - React.js
-  
+- Vite
+
 ### Back-end
 
 - Node.js
@@ -154,23 +176,26 @@ O meu objetivo não é apenas fazer uma interface de e-commerce, mas desenvolver
 - Git
 - GitHub
 - Visual Studio Code
-- Vite
 - npm
-  
+
 ---
 
 ## 📂 Organização do projeto
 
-- Estrutura modular, separando páginas, componentes, serviços e estilos.
-- Componentes React organizados por responsabilidade, facilitando reutilização e manutenção.
-- CSS separado por componentes e seções, evitando concentração excessiva de estilos em um único arquivo.
-- Separação entre front-end e back-end, mantendo responsabilidades bem definidas.
-- Comunicação com o back-end realizada por meio de uma API REST.
-- Estrutura preparada para facilitar a adição de novas funcionalidades e seções ao projeto.
-- Organização pensada para facilitar manutenção, escalabilidade e evolução do código.
+O projeto possui uma estrutura modular, separando responsabilidades entre páginas, componentes, serviços, estilos, back-end e banco de dados.
+
+- Componentes React organizados por responsabilidade.
+- Componentes reutilizáveis para elementos da interface.
+- Estilos SCSS separados por componentes e seções.
+- Front-end e back-end mantidos em estruturas separadas.
+- Comunicação entre cliente e servidor através de uma API REST.
+- PostgreSQL utilizado para persistência dos dados.
+- Estrutura preparada para facilitar a implementação de novas funcionalidades.
 
 ---
 
 ## 📌 Objetivo de aprendizado
 
-Este projeto faz parte dos meus estudos em Engenharia de Software e continuará recebendo melhorias conforme avanço nos estudos, incluindo arquitetura de backend, banco de dados e integração entre cliente e servidor.
+Este projeto faz parte dos meus estudos em Engenharia de Software e continua em desenvolvimento conforme avanço nos estudos.
+
+O objetivo é utilizar o projeto como um ambiente prático para aplicar conceitos de desenvolvimento web, arquitetura de software, banco de dados, APIs, responsividade, organização de código e integração entre diferentes partes de uma aplicação.
