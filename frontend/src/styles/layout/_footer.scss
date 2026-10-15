@@ -116,7 +116,7 @@
     color: $text-muted;
 }
 
-@include mobile {
+@include all-mobile {
     .footer-content {
         flex-direction: column;
         align-items: flex-start!important;
@@ -143,3 +143,5 @@
         margin-bottom: 50px;
     }
 }
+
+// footer ta bugado por algum motivo Arrumar, motivo é leyout mesmo, algum justfy e etc, mas ta no html provavelmente.

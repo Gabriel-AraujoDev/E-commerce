@@ -37,8 +37,27 @@ $hover-scale-favorite: 1.1;
 $hover-arrow-distance: 1px;
 $hover-indicator-width: 36px;
 
+// Tamanhos de fonte
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-h3: 1.25rem;
+$font-size-h2: 1.5rem;
+$font-size-h1: 2rem;
+
+// Pesos de fonte
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Altura de linha
+$line-height-heading: 1.2;
+$line-height-body: 1.5;
+
 // Breakpoints
 $bp-large: 1280px;
 $bp-desktop: 1024px;
 $bp-tablet: 768px;
-$bp-mobile: 480px;
+$bp-mobile-large: 426px;
+$bp-mobile: 376px;
+

@@ -60,3 +60,23 @@
         display: none;
     }
 }
+
+@include mobile-large {
+    .trust-container {
+        display: grid!important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .trust-title {
+        font-size: .8rem;
+    }
+
+    .trust-description {
+        font-size: .675rem;
+    }
+    .trust-icon {
+        width: 40px;
+        height: auto;
+    }
+}

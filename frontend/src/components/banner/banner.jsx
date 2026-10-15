@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import CreateBanner from "../banner/create-banner";
 
 function useMobile() {
     const [isMobile, setIsMobile] = useState(
-        window.matchMedia("(max-width: 479px)").matches
+        window.matchMedia("(max-width: 425px)").matches
     );
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 479px)");
+        const mediaQuery = window.matchMedia("(max-width: 425px)");
 
         const handleChange = () => {
             setIsMobile(mediaQuery.matches);
@@ -24,169 +25,177 @@ function useMobile() {
 
 function Banner() {
     const isMobile = useMobile();
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(false);
+
+    const sliderRef = useRef(null);
+    const touchStartRef = useRef(null);
+    const didSwipeRef = useRef(false);
+
+    const banners = [
+        {
+            id: 1,
+            url: "/assets/images/banners/banner-1.png",
+            link: "/produtos",
+            alt: "Tudo que você precisa em um só lugar. Qualidade, variedade e preços para o seu dia a dia. Compre já!",
+            mobile: isMobile ? "/assets/images/banners/mobile/banner-1.png" : null
+        },
+        {
+            id: 2,
+            url: "/assets/images/banners/banner-2.png",
+            link: "/promocoes",
+            alt: "Ofertas imperdíveis! Não perca as melhores promoções da semana. Compre agora!",
+            mobile: isMobile ? "/assets/images/banners/mobile/banner-2.png" : null
+        },
+        {
+            id: 3,
+            url: "/assets/images/banners/banner-3.png",
+            link: "/novidades",
+            alt: "Novidades chegaram! Confira nossos últimos produtos e descubra o que há de novo.",
+            mobile: isMobile ? "/assets/images/banners/mobile/banner-3.png" : null
+        }
+    ]
 
     useEffect(() => {
-        const bannerTrack = document.querySelector(".banner-track");
-        const indicators = document.querySelectorAll(".indicator");
-        const bannerSlider = document.querySelector(".banner-slider");
+        const slider = sliderRef.current;
 
-        //evitar erro
-        if (!bannerTrack || indicators.length === 0 || !bannerSlider) return;
+        if (!slider) return;
 
-        let index = 0;
-        let isBannerVisible = false;
-        let changedManually = false;
-        let manualTimeout;
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsVisible(entry.isIntersecting);
+        }, {
+            threshold: 0
+        });
 
-        function changeBanner(newIndex) {
-            index = newIndex;
-            bannerTrack.style.transform = `translateX(-${index * 100}%)`;
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle("active", i === index);
-            });
+        observer.observe(slider);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
+     useEffect(() => {
+        if (!isVisible || banners.length < 2) return;
+
+        const timer = window.setTimeout(() => {
+            setActiveIndex((current) => (
+                (current + 1) % banners.length
+            ));
+        }, 10000);
+
+        return () => {
+            window.clearTimeout(timer);
+        };
+    }, [activeIndex, isVisible]);
+
+    useEffect(() => {
+        if (banners.length < 2) return;
+
+        const timer = setTimeout(() => {
+            setActiveIndex(current => (current + 1) % banners.length);
+        }, 10000);
+
+        return () => clearTimeout(timer);
+    }, [activeIndex, banners.length]);
+
+    function handleTouchStart(event) {
+        if (!isMobile) return;
+
+        const touch = event.changedTouches[0];
+
+        touchStartRef.current = {
+            x: touch.clientX,
+            y: touch.clientY
+        };
+    }
+
+    function handleTouchEnd(event) {
+        if (!isMobile || !touchStartRef.current) return;
+
+        const start = touchStartRef.current;
+        const touch = event.changedTouches[0];
+
+        touchStartRef.current = null;
+
+        const deltaX = touch.clientX - start.x;
+        const deltaY = touch.clientY - start.y;
+
+        // Ignora movimentos pequenos ou predominantemente verticais
+
+        if (
+            Math.abs(deltaX) < 50 ||
+            Math.abs(deltaX) <= Math.abs(deltaY)
+        ) {
+            return;
         }
 
-        function nextBanner() {
-            index++;
-            if (index >= indicators.length) {
-                index = 0;
-            }
-            changeBanner(index);
-        }
+        didSwipeRef.current = true;
 
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
+        setActiveIndex((current) => {
+            const direction = deltaX < 0 ? 1 : -1;
 
-        async function autoChangeBanner() {
-            while (true) {
-                if (!isBannerVisible || changedManually) {
-                    await sleep(1000);
-                    continue;
-                }
-                await sleep(10000);
-                nextBanner();
-            }
-        }
+            return (
+                (current + direction + banners.length) %
+                banners.length
+            );
+        });
 
-        function setupIndicatorEvents() {
-            indicators.forEach((indicator, i) => {
-                indicator.addEventListener("click", () => {
-                    changeBanner(i);
-                    changedManually = true;
-                    clearTimeout(manualTimeout);
-                    manualTimeout = setTimeout(() => {
-                        changedManually = false;
-                    }, 25000);
-                });
-            });
-        }
+        // Evita que o clique gerado pelo swipe abra o link
 
-        function setupVisibilityObserver() {
-            const observer = new IntersectionObserver(([entry]) => {
-                isBannerVisible = entry.isIntersecting;
-            }, {
-                threshold: 0.5
-            });
+        window.setTimeout(() => {
+            didSwipeRef.current = false;
+        }, 500);
+    }
 
-            observer.observe(bannerSlider);
-        }
+    function handleClickCapture(event) {
+        if (!didSwipeRef.current) return;
 
-        setupVisibilityObserver();
-        autoChangeBanner();
-        
-        if (!isMobile) {
-            setupIndicatorEvents();
-        } else {
-            const slide = document.querySelector(".banner-slide");
+        event.preventDefault();
+        event.stopPropagation();
 
-            let startX = 0
-            let currentX = 0
-            if (slide) {
-                slide.addEventListener("touchstart", (event) => {
-                    startX = event.touches[0].clientX;
-                    currentX = startX;
+        didSwipeRef.current = false;
+    }
 
-                    bannerTrack.style.transition = "none";
-                });
-
-                slide.addEventListener("touchmove", (event) => {
-                    event.preventDefault();
-
-                    currentX = event.touches[0].clientX;
-
-                    const deltaX = currentX - startX;
-
-                    bannerTrack.style.transform =
-                        `translateX(calc(-${index * 100}% + ${deltaX}px))`;
-                }, { passive: false });
-
-                slide.addEventListener("touchend", () => {
-                    const deltaX = currentX - startX;
-                    bannerTrack.style.transition = "transform 0.4s ease";
-
-                    if (deltaX < -80) {
-                        nextBanner();
-                    }
-
-                    if (deltaX > 80) {
-                        if (index < 0) {
-                            index = indicators.length - 1;
-                        }
-
-                        changeBanner(index)
-                    }
-                });
-            }
-        }
-
-    }, []); 
-
+    function handleIndicatorClick(index) {
+        setActiveIndex(index);
+    }
+    
     return (
-        <section className="banner" aria-label="Banner promocional">
-            <div className="banner-slider">
-                <div className="banner-track flex">
-                    <div className="banner-slide">
-                        <img src="/assets/images/banners/banner-1.png" fetchPriority="high" alt="" />
-                        <div className="banner-overlay">
-                            <div className="banner-content flex flex-column gap-5">
-                                <h2 className="banner-title-black-left banner-title">Tudo que você precisa, em um só lugar.</h2>
-                                <p className="banner-description-black-left banner-description">Qualidade, variedade e os melhores preços para o seu dia a dia.</p>
-                                <a href="#" className="banner-button-black-left banner-button flex justify-center items-center">Compre agora</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="banner-slide">
-                        <img src="/assets/images/banners/banner-2.png" alt="" />
-                        <div className="banner-overlay">
-                            <div className="banner-content flex flex-column gap-5">
-                                <h2 className="banner-title-white-left banner-title">Ofertas que valem a pena.</h2>
-                                <p className="banner-description-white-left banner-description">Encontre seus produtos favoritos com preços especiais por tempo limitado.</p>
-                                <a href="#" className="banner-button-black-left banner-button flex justify-center items-center">Aproveitar ofertas</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="banner-slide">
-                        <img src="/assets/images/banners/banner-3.png" alt="" />
-                        <div className="banner-overlay">
-                            <div className="banner-content-right flex flex-column gap-5">
-                                <h2 className="banner-title-white-right banner-title">Receba seu pedido com facilidade.</h2>
-                                <p className="banner-description-white-right banner-description">Frete grátis acima de R$199 e condições especiais para você comprar com tranquilidade.</p>
-                                <a href="#" className="banner-button-black-right banner-button flex justify-center items-center">Compre agora</a>
-                            </div>
-                        </div>
-                    </div>
+        <div className="banner">
+            <div className="banner-slider" ref={sliderRef}>
+                <div
+                    className="banner-track"
+                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                    onTouchCancel={() => {
+                        touchStartRef.current = null;
+                    }}
+                    onClickCapture={handleClickCapture}
+                >
+                    {banners.map((banner) => (
+                        <CreateBanner
+                            key={banner.id}
+                            banner={banner}
+                            isMobile={isMobile}
+                        />
+                    ))}
                 </div>
 
                 <div className="banner-indicators flex">
-                    <button className="indicator active" type="button" aria-label="Banner 1"></button>
-                    <button className="indicator" type="button" aria-label="Banner 2"></button>
-                    <button className="indicator" type="button" aria-label="Banner 3"></button>
+                    {banners.map((banner, index) => (
+                        <button
+                            key={banner.id}
+                            className={`indicator ${activeIndex === index ? "active" : ""}`}
+                            type="button"
+                            aria-label={`Banner ${index + 1}`}
+                            aria-pressed={activeIndex === index}
+                            onClick={() => setActiveIndex(index)}
+                        />
+                    ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
 

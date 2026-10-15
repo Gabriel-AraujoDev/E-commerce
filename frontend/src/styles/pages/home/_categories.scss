@@ -67,7 +67,22 @@
 
     .categories-nav {
         display: grid!important;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+
+    .category-name {
+        font-size: .9rem;
+    }
+}
+
+@include mobile-large {
+    .categories-title {
+        font-size: 1rem;
+    }
+
+    .categories-nav {
+        display: grid!important;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .category-name {

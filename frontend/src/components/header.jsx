@@ -7,8 +7,6 @@ function Header() {
         <header className="site-header">
             <aside className="top-strip flex justify-between items-center">
                 <div className="shipping-banner flex items-center">
-                    <img className="shipping-icon" src="/assets/icons/top-strip/shipping-icon.svg" alt=""/>
-                    
                     <span className="shipping-text">Frete grátis em compras acima de R$199</span>
                 </div>
 
@@ -29,10 +27,6 @@ function Header() {
                         <span className="help-text">Ajuda</span>
                     </a>
                 </div>
-
-                <button className="top-strip-button">
-                    <img src="/assets/icons/header/white-chevron-icon.svg" className="top-strip-chevron-icon" alt="" />
-                </button>
             </aside>
 
             <div className="main-header flex items-center justify-between gap-5">

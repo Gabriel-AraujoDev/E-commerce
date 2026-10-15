@@ -1,68 +1,76 @@
 @use '../base/variables' as *;
 @use '../utilities/responsive' as *;
 
+// Mobile Bottom Navigation
 .mobile-bottom-nav {
     display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
+// Item ativo
 .mobile-bottom-active span {
-    color: $text-dark!important;
+    color: $text-dark !important;
 }
 
 .mobile-bottom-active img {
-    opacity: 1!important;
+    opacity: 1 !important;
 }
 
+// Contador do carrinho
 .mobile-bottom-cart-count-span {
     position: absolute;
     top: 5px;
     right: 15px;
 
-    width: 16px;
-    height: 16px;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #f5f5f5;
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid $bg-light;
     border-radius: 50%;
 
-    background: $bg-dark;
+    background-color: $bg-dark;
     color: $text-light;
 
     font-size: 10px;
     font-weight: 700;
 }
 
-@include mobile {
+// Responsividade geral para mobile
+@include all-mobile {
     .mobile-bottom-nav {
         display: flex;
+
         position: fixed;
+        inset-inline: 0;
         bottom: 0;
-        left: 0;
-        width: 100%;
+
+        width: auto;
         height: 10vh;
-        z-index: 1000;
+        padding: 5px 0 0;
+
+        z-index: 9999;
+
         background-color: $bg-light;
         box-shadow: $shadow-dark;
+
         justify-content: space-around;
         align-items: center;
-
-        padding-top: 5px;
     }
 
     .mobile-bottom-content {
         width: 20%;
         height: 100%;
     }
+}
 
+// Ajustes para telas menores até 376px
+@include mobile {
     .mobile-bottom-image {
         width: 20px;
+
         opacity: 0.8;
         object-fit: contain;
         flex-shrink: 0;
@@ -70,8 +78,11 @@
 
     .mobile-bottom-span {
         margin-top: 2px;
-        font-size: .7rem;
+
+        font-size: 0.7rem;
         line-height: 1;
+
         color: $text-muted;
     }
 }
+

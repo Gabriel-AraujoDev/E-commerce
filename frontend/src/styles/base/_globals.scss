@@ -10,6 +10,23 @@ img {
     height: auto;
 }
 
+h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-heading;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-heading;
+}
+
+p {
+    font-size: $font-size-base;
+    line-height: $line-height-body;
+}
+
 // Label de acessibilidade
 
 .accessibility-label {

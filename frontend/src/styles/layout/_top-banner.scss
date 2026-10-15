@@ -7,7 +7,7 @@
 .top-strip {
     width: 100%;
     height: 50px;
-    padding: 10px 20px;
+    padding-inline: $content-padding-inline;
     gap: 10vw;
 
     background-color: $bg-dark;
@@ -31,17 +31,10 @@
     margin-right: 15px;
 }
 
-.shipping-icon {
-    width: 30px;
-    height: auto;
-    margin-right: 5px;
-}
-
-
 // text
 
 .top-strip span {
-    font-size: 0.8rem;
+    font-size: $font-size-sm;
 }
 
 
@@ -52,40 +45,31 @@
 }
 
 
-// mobile
-
-@include mobile {
-
+// Mobile largo: até 425px
+@include mobile-large {
     .top-strip {
-        height: 48px;
+        height: 35px;
         padding: 0 16px;
-
         justify-content: center !important;
     }
 
-    .top-strip span {
-        display: inline;
-
-        font-size: 0.7rem;
-        line-height: 1;
-        white-space: nowrap;
-
-        transform: translateY(1px);
-    }
-
-    .assistance-icon,
-    .help-icon,
-    .shipping-icon,
-    .promo-banner,
-    .info-strip {
+    .promo-banner {
         display: none !important;
     }
 
-    .top-strip-button,
-    .top-strip-chevron-icon {
-        display: block;
-        
-        width: 30px;
-        height: 30px;
+    .assistance-icon,
+    .help-icon {
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+    }
+}
+
+// Mobile: até 375px
+@include mobile {
+    .assistance-icon,
+    .help-icon,
+    .info-strip {
+        display: none !important;
     }
 }

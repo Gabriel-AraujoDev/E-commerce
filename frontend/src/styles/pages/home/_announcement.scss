@@ -55,7 +55,7 @@
     box-shadow: $shadow-dark;
 }
 
-@include mobile {
+@include all-mobile {
     .announcement-content {
         gap: 1rem;
     }
