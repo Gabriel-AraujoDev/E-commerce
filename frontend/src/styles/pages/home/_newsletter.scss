@@ -78,57 +78,17 @@
     color: #aaa;
 }
 
-@include mobile {
-    .newsletter-content {
-        padding: 2rem 1rem;
-        height: 200px;
-        gap: 0;
-    }
-
-    .newsletter-info {
-        margin-right: 1rem;
-    }
-    
-    .newsletter-button {
-        background-color: $bg-dark;
-        width: 70px !important;
-        min-width: 70px !important;
-        height: 26px;
-        padding: 0;
-        font-size: .5rem;
-        line-height: 1;
-    }
-    
-    .newsletter-title {
-        font-size: 1.25rem;
-    }
-    
-    .newsletter-description {
-        font-size: .7rem;
-    }
-
-    .newsletter-description {
-        font-size: .55rem;
-    }
-
-    .newsletter-privacy {
-        width: 120px;
-        font-size: .575rem;
-    }
-
-    .newsletter-input {
-        width: 100px !important;
-        min-width: 10px !important;
-        height: 25px;
-        font-size: .575rem;
-    }
-}
-
 @include mobile-large {
     .newsletter-content {
-        padding: 2rem 1rem;
-        height: 200px;
-        gap: 0;
+        padding: 2rem 3rem;
+
+        background-image: url("../../../../public/assets/images/newsletter/banner.png");
+        background-size: cover;
+        background-position: 60% center;
+        background-repeat: no-repeat;
+        filter: contrast(0.95);
+
+        border-radius: $border-radius;
     }
 
     .newsletter-info {
@@ -167,5 +127,57 @@
         min-width: 10px !important;
         height: 36px;
         font-size: .675rem;
+    }
+}
+
+@include mobile {
+    .newsletter-content {
+        padding: 2rem 3rem;
+
+        background-image: url("../../../../public/assets/images/newsletter/banner.png");
+        background-size: cover;
+        background-position: 60% center;
+        background-repeat: no-repeat;
+        filter: contrast(0.95);
+
+        border-radius: $border-radius;
+    }
+
+    .newsletter-info {
+        margin-right: 1rem;
+    }
+    
+    .newsletter-button {
+        background-color: $bg-dark;
+        width: 70px !important;
+        min-width: 70px !important;
+        height: 26px;
+        padding: 0;
+        font-size: .5rem;
+        line-height: 1;
+    }
+    
+    .newsletter-title {
+        font-size: 1.25rem;
+    }
+    
+    .newsletter-description {
+        font-size: .7rem;
+    }
+
+    .newsletter-description {
+        font-size: .55rem;
+    }
+
+    .newsletter-privacy {
+        width: 100px;
+        font-size: .575rem;
+    }
+
+    .newsletter-input {
+        width: 100px !important;
+        min-width: 10px !important;
+        height: 25px;
+        font-size: .575rem;
     }
 }
