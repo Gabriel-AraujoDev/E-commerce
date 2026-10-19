@@ -19,7 +19,7 @@
 .mobile-bottom-cart-count-span {
     position: absolute;
     top: 5px;
-    right: 15px;
+    right: 65px;
 
     display: flex;
     align-items: center;
@@ -38,8 +38,8 @@
     font-weight: 700;
 }
 
-// Responsividade geral para mobile
-@include all-mobile {
+// Responsividade geral para mobile e tablet
+@include all-mobile-and-tablet {
     .mobile-bottom-nav {
         display: flex;
 
@@ -64,10 +64,7 @@
         width: 20%;
         height: 100%;
     }
-}
 
-// Ajustes para telas menores até 376px
-@include mobile {
     .mobile-bottom-image {
         width: 20px;
 
@@ -79,10 +76,22 @@
     .mobile-bottom-span {
         margin-top: 2px;
 
-        font-size: 0.7rem;
+        font-size: $font-size-sm;
         line-height: 1;
 
         color: $text-muted;
     }
 }
 
+// Responsividade para all mobiles
+
+@include all-mobile {
+    .mobile-bottom-span {
+        font-size: 0.7rem;
+    }
+
+    .mobile-bottom-cart-count-span {
+        top: 5px;
+        right: 15px;
+    }
+}

@@ -60,18 +60,10 @@
     color: $text-dark;
 }
 
-@include mobile {
-    .categories-title {
-        font-size: 1rem;
-    }
-
+@include tablet {
     .categories-nav {
         display: grid!important;
-        grid-template-columns: repeat(2, 1fr)!important;
-    }
-
-    .category-name {
-        font-size: .9rem;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -83,6 +75,21 @@
     .categories-nav {
         display: grid!important;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-name {
+        font-size: .9rem;
+    }
+}
+
+@include mobile {
+    .categories-title {
+        font-size: 1rem;
+    }
+
+    .categories-nav {
+        display: grid!important;
+        grid-template-columns: repeat(2, 1fr)!important;
     }
 
     .category-name {

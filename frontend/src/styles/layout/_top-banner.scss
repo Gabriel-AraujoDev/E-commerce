@@ -44,6 +44,21 @@
     gap: 1vw;
 }
 
+// Tablet: até 768px
+
+@include tablet {
+    .top-strip {
+        height: 35px;
+    }
+    
+    .info-strip {
+        gap: 3rem;
+    }
+
+    .promo-banner {
+        display: none !important;
+    }
+}
 
 // Mobile largo: até 425px
 @include mobile-large {
@@ -53,15 +68,18 @@
         justify-content: center !important;
     }
 
+    .top-strip span {
+        font-size: $font-size-xs;
+    }
+
     .promo-banner {
         display: none !important;
     }
 
     .assistance-icon,
-    .help-icon {
-        width: 20px;
-        height: auto;
-        margin-right: 5px;
+    .help-icon,
+    .info-strip {
+        display: none !important;
     }
 }
 

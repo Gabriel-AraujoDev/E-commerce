@@ -137,6 +137,18 @@
     background: $bg-dark;
 }
 
+// Tablet: até 768px
+
+@include tablet {
+    .banner {
+        margin-top: 0;
+        height: 300px;
+    }
+
+    .banner-slider {
+        height: 300px;
+    }
+}
 
 // Mobile largo
 

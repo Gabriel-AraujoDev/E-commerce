@@ -41,25 +41,18 @@
     font-weight: 400;
 }
 
-@include mobile {
+
+// Tablet: até 768px
+
+@include tablet {
     .trust-container {
         display: grid!important;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-
-    .trust-title {
-        font-size: .8rem;
-    }
-
-    .trust-description {
-        font-size: .675rem;
-    }
-
-    .trust-icon {
-        display: none;
-    }
 }
+
+// Mobile: até 425px
 
 @include mobile-large {
     .trust-container {
@@ -78,5 +71,27 @@
     .trust-icon {
         width: 40px;
         height: auto;
+    }
+}
+
+// Mobile: até 375px
+
+@include mobile {
+    .trust-container {
+        display: grid!important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .trust-title {
+        font-size: .8rem;
+    }
+
+    .trust-description {
+        font-size: .675rem;
+    }
+
+    .trust-icon {
+        display: none;
     }
 }

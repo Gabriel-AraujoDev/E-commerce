@@ -136,7 +136,7 @@
 
 // Mobile
 
-@include all-mobile {
+@include all-mobile-and-tablet {
 
     // Header
 
@@ -405,4 +405,8 @@
     .close-mobile-menu-icon {
         object-fit: contain;
     }
+}
+
+@include all-mobile {
+    
 }

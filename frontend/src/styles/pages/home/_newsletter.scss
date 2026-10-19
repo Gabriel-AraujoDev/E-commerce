@@ -68,6 +68,7 @@
     border-radius: 0 $border-radius $border-radius 0;
     border: 1px solid white;
     color: $text-light;
+    background-color: $bg-dark;
 }
 
 
@@ -77,6 +78,19 @@
     font-size: 14px;
     color: #aaa;
 }
+
+// Tablet: até 768px
+@include tablet {
+    .newsletter-privacy {
+        max-width: 200px;
+    }
+
+    .newsletter-input-group {
+        justify-content: flex-start!important;
+    }
+}
+
+// Mobile: até 425px
 
 @include mobile-large {
     .newsletter-content {
@@ -96,7 +110,6 @@
     }
     
     .newsletter-button {
-        background-color: $bg-dark;
         width: 80px !important;
         min-width: 80px !important;
         height: 36px;
@@ -148,7 +161,6 @@
     }
     
     .newsletter-button {
-        background-color: $bg-dark;
         width: 70px !important;
         min-width: 70px !important;
         height: 26px;
