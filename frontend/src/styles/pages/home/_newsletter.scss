@@ -85,6 +85,27 @@
         max-width: 200px;
     }
 
+    .newsletter-form {
+        display: flex;
+        width: 70%;
+        max-width: 100%;
+    }
+
+    .newsletter-input {
+        flex: 1 1 8rem;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .newsletter-button {
+        flex: 0 0 clamp(8rem, 12vw, 6rem);
+        width: clamp(8rem, 12vw, 6rem);
+        min-width: 0;
+        height: 41px;
+        box-sizing: border-box;
+    }
+
     .newsletter-input-group {
         justify-content: flex-start!important;
     }

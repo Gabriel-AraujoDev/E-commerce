@@ -18,6 +18,12 @@
   }
 }
 
+@mixin tablet-small {
+  @media (max-width: #{$bp-tablet-small - 1px}) {
+    @content;
+  }
+}
+
 @mixin mobile-large {
   @media (max-width: #{$bp-mobile-large - 1px}) {
     @content;

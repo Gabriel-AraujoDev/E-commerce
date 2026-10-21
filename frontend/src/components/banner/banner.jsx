@@ -3,11 +3,11 @@ import CreateBanner from "../banner/create-banner";
 
 function useMobile() {
     const [isMobile, setIsMobile] = useState(
-        window.matchMedia("(max-width: 425px)").matches
+        window.matchMedia("(max-width: 700px)").matches
     );
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 425px)");
+        const mediaQuery = window.matchMedia("(max-width: 700px)");
 
         const handleChange = () => {
             setIsMobile(mediaQuery.matches);

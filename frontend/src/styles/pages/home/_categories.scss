@@ -67,6 +67,19 @@
     }
 }
 
+// Tablet pequeno: até 699px
+@include tablet-small {
+    .categories-title {
+        font-size: 1rem;
+    }
+
+    .categories-nav {
+        display: grid!important;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
 @include mobile-large {
     .categories-title {
         font-size: 1rem;
