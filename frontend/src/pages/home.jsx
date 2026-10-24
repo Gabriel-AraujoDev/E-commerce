@@ -50,7 +50,7 @@ function Home() {
                         
                             <input type="email" className="newsletter-input" placeholder="Digite seu e-mail" id="newsletter-email"/>
 
-                            <button type="submit" className="newsletter-button">Quero o desconto</button>
+                            <button type="submit" className="newsletter-button flex justify-center items-center">Quero o desconto</button>
                         </div>
                         
                         <div className="newsletter-privacy">

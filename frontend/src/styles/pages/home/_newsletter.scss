@@ -1,6 +1,7 @@
 @use '../../base/variables' as *;
 @use '../../utilities/responsive' as *;
 
+
 // Newsletter
 
 .newsletter {
@@ -9,12 +10,12 @@
 }
 
 
-// Conteúdo da newsletter
+// Conteúdo
 
 .newsletter-content {
     padding: 2rem 3rem;
 
-    background-image: url("../../../../public/assets/images/newsletter/banner.png");
+    background-image: url("/assets/images/newsletter/banner.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,15 +33,16 @@
 }
 
 .newsletter-title {
-    font-size: 2rem;
+    font-size: $font-size-h1;
     font-weight: 700;
     color: $text-light;
 }
 
 .newsletter-description {
-    font-size: 1rem;
+    font-size: $font-size-base;
     color: $text-light;
 }
+
 
 // Campo de e-mail
 
@@ -51,6 +53,7 @@
     color: $text-dark;
     border-radius: $border-radius 0 0 $border-radius;
     border: 1px solid white;
+    font-size: $font-size-base;
     font-weight: 600;
 }
 
@@ -69,20 +72,32 @@
     border: 1px solid white;
     color: $text-light;
     background-color: $bg-dark;
+    font-size: $font-size-base;
 }
 
 
 // Privacidade
 
 .newsletter-privacy {
-    font-size: 14px;
+    font-size: $font-size-sm;
     color: #aaa;
 }
 
-// Tablet: até 768px
+
+// Tablet
+
 @include tablet {
-    .newsletter-privacy {
-        max-width: 200px;
+    .newsletter-content {
+        padding: 1rem;
+
+        background-image: url("/assets/images/newsletter/mobile/banner.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .newsletter-info {
+        margin-right: 20px;
     }
 
     .newsletter-form {
@@ -91,126 +106,137 @@
         max-width: 100%;
     }
 
+    .newsletter-input-group {
+        justify-content: flex-start !important;
+    }
+
     .newsletter-input {
-        flex: 1 1 8rem;
-        width: 100%;
+        flex: 1 1 0;
         min-width: 0;
+        height: 45px;
         box-sizing: border-box;
+
+        font-size: $font-size-xs;
     }
 
     .newsletter-button {
-        flex: 0 0 clamp(8rem, 12vw, 6rem);
-        width: clamp(8rem, 12vw, 6rem);
+        flex: 0 0 10vh;
+        width: 48px;
         min-width: 0;
-        height: 41px;
+        height: 45px;
         box-sizing: border-box;
-    }
 
-    .newsletter-input-group {
-        justify-content: flex-start!important;
+        font-size: $font-size-xs;
     }
 }
 
-// Mobile: até 425px
+
+// Mobile large
 
 @include mobile-large {
-    .newsletter-content {
-        padding: 2rem 3rem;
-
-        background-image: url("../../../../public/assets/images/newsletter/banner.png");
-        background-size: cover;
-        background-position: 60% center;
-        background-repeat: no-repeat;
-        filter: contrast(0.95);
-
-        border-radius: $border-radius;
-    }
-
     .newsletter-info {
         margin-right: 1rem;
     }
-    
-    .newsletter-button {
-        width: 80px !important;
-        min-width: 80px !important;
-        height: 36px;
-        padding: 0;
-        font-size: .6rem;
-        line-height: 1;
-    }
-    
+
     .newsletter-title {
-        font-size: 1.35rem;
-    }
-    
-    .newsletter-description {
-        font-size: .8rem;
+        font-size: $font-size-h3;
     }
 
     .newsletter-description {
-        font-size: .65rem;
-    }
-
-    .newsletter-privacy {
-        width: 130px;
-        font-size: .675rem;
+        font-size: $font-size-xs;
     }
 
     .newsletter-input {
-        width: 120px !important;
-        min-width: 10px !important;
-        height: 36px;
-        font-size: .675rem;
+        flex: 1 1 0;
+        min-width: 0;
+        height: 35px;
+        box-sizing: border-box;
+
+        font-size: $font-size-xs;
+    }
+
+    .newsletter-button {
+        flex: 0 0 60px;
+        width: 60px;
+        min-width: 0;
+        height: 35px;
+        box-sizing: border-box;
+
+        font-size: $font-size-xxs;
+    }
+
+    .newsletter-privacy {
+        font-size: $font-size-xs;
     }
 }
+
+
+// Mobile
 
 @include mobile {
     .newsletter-content {
-        padding: 2rem 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
 
-        background-image: url("../../../../public/assets/images/newsletter/banner.png");
-        background-size: cover;
-        background-position: 60% center;
-        background-repeat: no-repeat;
-        filter: contrast(0.95);
-
-        border-radius: $border-radius;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
     }
 
     .newsletter-info {
-        margin-right: 1rem;
+        width: 100%;
+        min-width: 0;
+        margin-right: 0;
     }
-    
-    .newsletter-button {
-        width: 70px !important;
-        min-width: 70px !important;
-        height: 26px;
-        padding: 0;
-        font-size: .5rem;
-        line-height: 1;
-    }
-    
+
     .newsletter-title {
-        font-size: 1.25rem;
-    }
-    
-    .newsletter-description {
-        font-size: .7rem;
+        font-size: $font-size-h3;
     }
 
     .newsletter-description {
-        font-size: .55rem;
+        font-size: $font-size-xs;
     }
 
-    .newsletter-privacy {
-        width: 100px;
-        font-size: .575rem;
+    .newsletter-form {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+
+    .newsletter-input-group {
+        max-width: 90%;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
     .newsletter-input {
-        width: 100px !important;
-        min-width: 10px !important;
-        height: 25px;
-        font-size: .575rem;
+        flex: 1 1 0;
+        width: 0;
+        min-width: 0;
+        height: 30px;
+        box-sizing: border-box;
+
+        font-size: $font-size-xs;
+    }
+
+    .newsletter-button {
+        flex: 0 0 60px;
+        width: 60px;
+        min-width: 0;
+        height: 30px;
+        box-sizing: border-box;
+
+        font-size: $font-size-xxs;
+    }
+
+    .newsletter-privacy {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-size: $font-size-xs;
     }
 }

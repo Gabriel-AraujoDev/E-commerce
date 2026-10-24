@@ -13,7 +13,7 @@
 }
 
 
-// Títulos das seções
+// Títulos
 
 .featured-products-title,
 .best-deals-title,
@@ -126,9 +126,26 @@
     height: 1.3rem;
 }
 
-// Telas menores que desktop
 
-@include large {
+// Desktop large
+
+@include desktop-large {
+    .products-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        justify-content: stretch;
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+// Desktop medium
+
+@include desktop-medium {
     .products-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         justify-content: stretch;
@@ -142,15 +159,21 @@
 }
 
 
-// Desktop menor
+// Desktop small
 
-@include desktop {
+@include desktop-small {
     .products-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         justify-content: stretch;
-        gap: 1rem;
+        gap: 0.75rem;
+    }
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
     }
 }
+
 
 // Tablet
 
@@ -178,7 +201,8 @@
     }
 }
 
-// Mobile largo
+
+// Mobile large
 
 @include mobile-large {
     .featured-products-title,
@@ -227,8 +251,6 @@
         min-width: 0;
         height: 325px;
     }
-
-    // Reexibe o quarto produto ocultado pelo tablet
 
     .product-card:nth-child(4) {
         display: flex;

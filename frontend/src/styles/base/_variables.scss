@@ -38,6 +38,8 @@ $hover-arrow-distance: 1px;
 $hover-indicator-width: 36px;
 
 // Tamanhos de fonte
+$font-size-xxxs: 0.5rem;
+$font-size-xxs: 0.625rem;
 $font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-base: 1rem;
@@ -55,12 +57,21 @@ $font-weight-bold: 700;
 $line-height-heading: 1.2;
 $line-height-body: 1.5;
 
-// Breakpoints
-$bp-large: 1280px;
-$bp-desktop: 1024px;
-$bp-tablet: 769px;
+// Breakpoints mobile
+
+$bp-mobile-large: 425px;
+$bp-mobile: 375px;
+
+
+// Breakpoints tablet
+
+$bp-tablet: 768px;
 $bp-tablet-small: 700px;
-$bp-mobile-large: 426px;
-$bp-mobile: 376px;
 
 
+// Breakpoints desktop
+
+$breakpoint-desktop-extra-large: 1444px;
+$breakpoint-desktop-large: 1280px;
+$breakpoint-desktop-medium: 1200px;
+$breakpoint-desktop-small: 1100px;
