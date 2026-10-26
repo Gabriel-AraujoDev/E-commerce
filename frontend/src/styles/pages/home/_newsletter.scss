@@ -82,7 +82,62 @@
     font-size: $font-size-sm;
     color: #aaa;
 }
+// desktop-small
+@include desktop-small {
+    .newsletter-input-group {
+        justify-content: flex-start!important;
+    }
 
+    .newsletter-privacy {
+        max-width: 300px;
+    }
+}
+
+// desktop-extra-small
+
+@include desktop-extra-small {
+    .newsletter-content {
+        padding: 1rem;
+
+        background-image: url("/assets/images/newsletter/mobile/banner.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+     .newsletter-info {
+        margin-right: 20px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        width: 70%;
+        max-width: 100%;
+    }
+
+    .newsletter-input-group {
+        justify-content: flex-start !important;
+    }
+
+    .newsletter-input {
+        flex: 1 1 0;
+        min-width: 0;
+        height: 45px;
+        box-sizing: border-box;
+
+        font-size: $font-size-xs;
+    }
+
+    .newsletter-button {
+        flex: 0 0 10vh;
+        width: 48px;
+        min-width: 0;
+        height: 45px;
+        box-sizing: border-box;
+
+        font-size: $font-size-xs;
+    }
+}
 
 // Tablet
 

@@ -44,6 +44,20 @@
     gap: 1vw;
 }
 
+
+// Desktop small
+
+@include desktop-small {
+    .promo-banner {
+        display: none !important;
+    }
+}
+
+@include desktop-extra-small {
+    .promo-banner {
+        display: none !important;
+    } 
+}
 // Tablet: até 768px
 
 @include tablet {

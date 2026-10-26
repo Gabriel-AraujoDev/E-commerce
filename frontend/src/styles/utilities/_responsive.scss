@@ -10,13 +10,13 @@
 }
 
 @mixin desktop-large {
-    @media (width > #{$breakpoint-desktop-large}) and (width <= #{$breakpoint-desktop-extra-large}) {
+    @media (width > #{$breakpoint-desktop-medium}) and (width <= #{$breakpoint-desktop-large}) {
         @content;
     }
 }
 
 @mixin desktop-medium {
-    @media (width > #{$breakpoint-desktop-medium}) and (width <= #{$breakpoint-desktop-large}) {
+    @media (width > #{$breakpoint-desktop-small}) and (width <= #{$breakpoint-desktop-medium}) {
         @content;
     }
 }
@@ -27,8 +27,20 @@
     }
 }
 
+@mixin desktop-extra-small {
+    @media (width >= #{$breakpoint-desktop-extra-small}) and (width < #{$breakpoint-desktop-small}) {
+        @content;
+    }
+}
+
 @mixin all-desktop {
     @media (width > #{$breakpoint-desktop-small}) {
+        @content;
+    }
+}
+
+@mixin all-mobile-and-tablet-and-desktop-extra-small {
+    @media (width <= #{$breakpoint-desktop-small}) {
         @content;
     }
 }

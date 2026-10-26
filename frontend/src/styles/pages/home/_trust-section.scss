@@ -41,6 +41,14 @@
     font-weight: 400;
 }
 
+// desktop-extra-small
+@include desktop-extra-small {
+    .trust-container {
+        display: grid!important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
 
 // Tablet: até 768px
 

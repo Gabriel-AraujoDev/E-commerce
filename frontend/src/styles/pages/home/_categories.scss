@@ -60,6 +60,25 @@
     color: $text-dark;
 }
 
+// Desktop small
+
+@include desktop-small {
+    .categories-nav {
+        display: grid!important;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+// desktop-extra-small
+
+@include desktop-extra-small {
+    .categories-nav {
+        display: grid!important;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+// Tablet
 @include tablet {
     .categories-nav {
         display: grid!important;
