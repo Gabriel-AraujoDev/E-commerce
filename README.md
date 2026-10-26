@@ -2,7 +2,11 @@
 
 ## 📸 Desktop Preview
 
-![Preview da aplicação](./preview-image/home.jpeg)
+![Preview da aplicação](./preview-image/desktop-home.jpeg)
+
+## 📸 Tablet Preview
+
+![Preview da aplicação](./preview-image/tablet-home.jpeg)
 
 ## 📸 Mobile Preview
 
