@@ -11,7 +11,7 @@
 
 // Lista de navegação e link de categorias
 .navigation-list, .categories-link-header {
-    font-size: 0.95rem;
+    font-size: $font-size-base;
 }
 
 // Ícone das categorias
@@ -23,7 +23,7 @@
 // Texto das categorias
 .categories-text {
     color: $text-dark;
-    font-size: 1rem;
+    font-size: $font-size-base;
     font-weight: 700;
 }
 

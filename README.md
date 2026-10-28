@@ -107,7 +107,7 @@ A proposta vai além da criação de uma interface de e-commerce. O projeto est�
 - [x] Rodapé
 - [x] Animações e transições
 - [x] Responsividade para dispositivos móveis
-- [ ] Melhorar responsividade para diferentes tamanhos de tela
+- [x] Melhorar responsividade para diferentes tamanhos de tela
 
 ### Funcionalidades
 

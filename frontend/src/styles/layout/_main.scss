@@ -34,7 +34,7 @@
     background-color: $bg-dark;
     color: $text-light;
 
-    font-size: 10px;
+    font-size: $font-size-xxs;
     font-weight: 700;
 }
 
@@ -96,7 +96,7 @@
 
 @include all-mobile {
     .mobile-bottom-span {
-        font-size: 0.7rem;
+        font-size: $font-size-xs;
     }
 
     .mobile-bottom-cart-count-span {

@@ -19,7 +19,7 @@
 .best-deals-title,
 .best-eletronics-deals-title,
 .low-stock-products-title {
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
     font-weight: 700;
     color: $text-dark;
 }
@@ -29,7 +29,7 @@
 .all-best-eletronics-deals-text,
 .all-low-stock-products-text {
     color: $text-dark;
-    font-size: 1rem;
+    font-size: $font-size-base;
     font-weight: 600;
 }
 
@@ -90,30 +90,30 @@
 }
 
 .product-name {
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
     font-weight: 700;
     color: $bg-dark;
 }
 
 .product-category {
-    font-size: 0.75rem;
+    font-size: $font-size-xs;
     font-weight: 600;
     color: $text-muted;
 }
 
 .product-price {
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
     font-weight: 800;
     color: #007a03;
 }
 
 .product-original-price {
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
     font-weight: 800;
 }
 
 .product-installments {
-    font-size: 0.75rem;
+    font-size: $font-size-xs;
     font-weight: 800;
     color: $bg-dark;
 }
@@ -235,19 +235,19 @@
     .featured-products-title,
     .best-deals-title,
     .low-stock-products-title {
-        font-size: 1.1rem;
+        font-size: $font-size-lg;
     }
 
     .all-featured-products-text,
     .all-best-deals-text,
     .low-stock-products-link {
-        font-size: 0.9rem;
+        font-size: $font-size-sm;
     }
 
     .product-name,
     .product-price,
     .product-original-price {
-        font-size: 0.9rem;
+        font-size: $font-size-sm;
     }
 
     .product-name {
@@ -265,7 +265,7 @@
 
     .product-category,
     .product-installments {
-        font-size: 0.75rem;
+        font-size: $font-size-xs;
     }
 
     .products-grid {
@@ -301,24 +301,24 @@
     .featured-products-title,
     .best-deals-title,
     .low-stock-products-title {
-        font-size: 1rem;
+        font-size: $font-size-base;
     }
 
     .all-featured-products-text,
     .all-best-deals-text,
     .low-stock-products-link {
-        font-size: 0.8rem;
+        font-size: $font-size-xs;
     }
 
     .product-name,
     .product-price,
     .product-original-price {
-        font-size: 0.8rem;
+        font-size: $font-size-xs;
     }
 
     .product-category,
     .product-installments {
-        font-size: 0.65rem;
+        font-size: $font-size-xxs;
     }
 
     .products-grid {

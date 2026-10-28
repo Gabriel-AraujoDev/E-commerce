@@ -11,14 +11,14 @@
 // Título
 
 .categories-title {
-    font-size: 1.125rem;
+    font-size: $font-size-lg;
     font-weight: 700;
     color: #262626;
 }
 
 .all-categories-text {
     color: #262626;
-    font-size: 1rem;
+    font-size: $font-size-base;
     font-weight: 600;
 }
 
@@ -89,7 +89,7 @@
 // Tablet pequeno: até 699px
 @include tablet-small {
     .categories-title {
-        font-size: 1rem;
+        font-size: $font-size-base;
     }
 
     .categories-nav {
@@ -100,7 +100,7 @@
 
 @include mobile-large {
     .categories-title {
-        font-size: 1rem;
+        font-size: $font-size-base;
     }
 
     .categories-nav {
@@ -109,13 +109,13 @@
     }
 
     .category-name {
-        font-size: .9rem;
+        font-size: $font-size-sm;
     }
 }
 
 @include mobile {
     .categories-title {
-        font-size: 1rem;
+        font-size: $font-size-base;
     }
 
     .categories-nav {
@@ -124,6 +124,6 @@
     }
 
     .category-name {
-        font-size: .9rem;
+        font-size: $font-size-sm;
     }
 }

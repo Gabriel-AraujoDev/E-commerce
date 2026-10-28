@@ -28,13 +28,13 @@
 // Título e descrição
 
 .announcement-title {
-    font-size: 1rem;
+    font-size: $font-size-base;
     font-weight: 600;
     color: $text-light;
 }
 
 .announcement-description {
-    font-size: 0.875rem;
+    font-size: $font-size-sm;
     font-weight: 400;
     color: $text-light;
 }
@@ -46,7 +46,7 @@
     padding: 10px 10px;
     gap: 0.5rem;
 
-    font-size: 0.9rem;
+    font-size: $font-size-sm;
 
     color: $text-light;
     background-color: $bg-dark;
@@ -60,15 +60,15 @@
         gap: 1rem;
     }
     .announcement-title {
-        font-size: .9rem;
+        font-size: $font-size-sm;
     }
 
     .announcement-description {
-        font-size: .775rem;
+        font-size: $font-size-sm;
         width: 237.5px;
     }
 
     .announcement-link {
-        font-size: .8rem;
+        font-size: $font-size-xs;
     }
 }

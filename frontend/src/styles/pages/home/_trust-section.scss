@@ -31,13 +31,13 @@
 // Título e descrição
 
 .trust-title {
-    font-size: 1rem;
+    font-size: $font-size-base;
     color: $text-dark;
     font-weight: bold;
 }
 
 .trust-description {
-    font-size: .875rem;
+    font-size: $font-size-sm;
     font-weight: 400;
 }
 
@@ -70,11 +70,11 @@
     }
 
     .trust-title {
-        font-size: .8rem;
+        font-size: $font-size-xs;
     }
 
     .trust-description {
-        font-size: .675rem;
+        font-size: $font-size-xxs;
     }
     .trust-icon {
         width: 40px;
@@ -92,11 +92,11 @@
     }
 
     .trust-title {
-        font-size: .8rem;
+        font-size: $font-size-xs;
     }
 
     .trust-description {
-        font-size: .675rem;
+        font-size: $font-size-xxs;
     }
 
     .trust-icon {
