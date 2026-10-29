@@ -1,0 +1,165 @@
+@use '../../base/variables' as *;
+@use '../../utilities/responsive' as *;
+
+.register-header {
+    background-color: $bg-dark;
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.register-page-container {
+    min-height: 100vh;
+}
+
+.register-page {
+    flex: 1;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+.register-logo-link {
+    color: $text-light;
+    font-size: 1.5rem;
+}
+
+.account-register-container {
+    padding: 2rem;
+    width: min(500px, 100%);
+    background-color: rgb(251, 250, 250);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.register-field-group,
+.register-label,
+.register-input,
+.register-button {
+    width: 400px;
+}
+
+.register-label {
+    font-weight: 500;
+}
+
+.register-form {
+    width: 400px;
+}
+
+.account-register-container-footer {
+    width: 100%;
+    padding: 1rem;
+    flex-shrink: 0;
+    background-color: #b3b3b330;
+}
+
+.register-input {
+    padding: 0.5rem;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.register-input:focus {
+    border-color: $bg-dark;
+    box-shadow: 0 0 0 3px rgba(38, 38, 38, 0.15);
+}
+
+.register-input-error {
+    border-color: #b42318;
+}
+
+.register-input-hint,
+.register-error {
+    font-size: 0.8rem;
+}
+
+.register-input-hint {
+    color: $text-muted;
+}
+
+.register-error {
+    color: #b42318;
+}
+
+.register-button {
+    padding: 0.5rem 1rem;
+    height: 40px;
+    background-color: $bg-dark;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.register-button:hover {
+    background-color: $bg-muted;
+}
+
+.register-button:focus-visible,
+.register-terms input:focus-visible,
+.login-link:focus-visible,
+.account-register-help-link:focus-visible {
+    outline: 3px solid rgba(38, 38, 38, 0.35);
+    outline-offset: 2px;
+}
+
+.register-field-password,
+.register-field-password-confirmation {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.account-register-container-header h2 {
+    font-size: 1.5rem;
+
+}
+
+.account-register-container-header p {
+    margin-bottom: 1.5rem;
+    color: $text-muted;
+}
+
+.register-terms {
+    width: 400px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.register-terms input {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.register-terms a,
+.login-link {
+    color: $bg-dark;
+    text-decoration: underline;
+}
+
+.account-register-help-link {
+    color: rgb(37, 113, 227);
+}
+
+@include mobile-large {
+    .register-form,
+    .register-field-group,
+    .register-label,
+    .register-input,
+    .register-button,
+    .register-terms {
+        width: 100%;
+    }
+}
+
+@include mobile {
+    .register-page {
+        padding: 1rem;
+    }
+
+    .account-register-container {
+        padding: 1.25rem;
+    }
+}

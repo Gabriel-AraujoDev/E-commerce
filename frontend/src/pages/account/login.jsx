@@ -1,30 +1,46 @@
+import { Link } from "react-router-dom";
 // deixar o header com só a logo e um footer apenas de copyright
 
 
 function Login() {
   return (
-    <section className="login-page">
-        <div className="account-login-container">
-          <header className="account-login-container-header">
-              <h1>Digite seu E-mail para iniciar sessão</h1>
-          </header>
+    <div className="login-page-container flex flex-column">
+        <header className="login-header flex items-center justify-center">
+            <h1 className="login-logo flex items-center">
+                <a className="login-logo-link" href="/" data-discover="true">MERCADÃO</a>
+            </h1>
+        </header>
 
-          <div className="account-login-container-main">
-              <form className="login-email-form">
-                  <label className="login-email-label" htmlFor="newsletter-email" aria-label="Digite seu E-mail">E-mail.</label>
-                  
-                  <input type="email" className="login-email-input" placeholder="Digite seu e-mail" id="newsletter-email"/>
+        <main className="login-page flex justify-center items-center">
+            <div className="account-login-container flex justify-between items-center gap-8 flex-column">
+                <div className="account-login-container-header">
+                    <h2>Coloque seu e-mail para iniciar sessão.</h2>
+                </div>
 
-                  <button type="submit" className="login-email-button">Continuar</button>
-              </form>
-              <button type="submit" className="login-email-button">Criar conta</button>
-          </div>
+                <div className="account-login-container-main">
+                    <form className="login-email-form flex flex-column gap-4" action="/login" method="POST">
+                        <div className="login-email-group flex flex-column gap-2">                          
+                            <input type="email" className="login-email-input" placeholder="Digite seu e-mail" name="email" required autoComplete="email" id="login-email"/>
+                        </div>
 
-          <footer className="account-login-container-footer">
-              <a href="#">Algum problema? Clique aqui</a>
-          </footer>
-      </div>
-    </section>
+                        <div className="login-email-group flex flex-column justify-center items-center gap-4">
+                            <button type="submit" className="login-email-button">Continuar</button>
+                            
+                            <Link to="/register" className="sign-up-email-link">Não tem uma conta? Crie uma agora!</Link>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer className="account-login-container-footer flex flex-column justify-center items-center gap-4">
+            <Link className="account-login-help-link" to="/help">Algum problema? Clique aqui</Link>
+
+            <div className="footer-bottom flex justify-center items-center gap-4">
+                <p>&copy; 2026 Mercadão. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
   );
 }
 
