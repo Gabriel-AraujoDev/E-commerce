@@ -4,8 +4,8 @@ import Header from "./components/header";
 import Home from "./pages/home";
 import Footer from "./components/footer";
 
-import Login from "./pages/account/login"
-import Register from "./pages/account/register"
+import Login from "./pages/account/login/login"
+import Register from "./pages/account/register/register-email"
 
 function App() {
     return (
